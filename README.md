@@ -92,7 +92,7 @@ Bocaditos Santi/
 
 1. **Abrir la terminal en la raíz del proyecto:**
    ```bash
-   cd "c:\Users\Sandra Maldonado\Desktop\Bocaditos Santi"
+   cd "c:\Users\Sandra Maldonado\Desktop\Bocaditos Santy"
    ```
 
 2. **Crear y activar el entorno virtual (si no existe):**
