@@ -68,9 +68,10 @@ db.sqlite3
 backend/registros/*.log
 backend/archivos_estaticos/
 
-# Archivos subidos en desarrollo local (en la nube se usa Cloudinary)
+# Archivos subidos en desarrollo local (se preservan fotos base del catálogo)
 backend/archivos_subidos/*
 !backend/archivos_subidos/.gitkeep
+!backend/archivos_subidos/productos/
 
 # Archivos de extracción temporal y PDF de origen pesado (42MB)
 recursos_extraidos/

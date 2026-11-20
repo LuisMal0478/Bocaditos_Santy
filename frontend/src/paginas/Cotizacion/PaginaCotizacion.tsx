@@ -254,6 +254,9 @@ export const PaginaCotizacion: React.FC = () => {
                         src={item.producto.imagen_url || '/placeholder.jpg'}
                         alt={item.producto.nombre}
                         className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.target as HTMLImageElement).src = '/placeholder.jpg';
+                        }}
                       />
                     </div>
 

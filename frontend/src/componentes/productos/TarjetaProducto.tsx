@@ -32,6 +32,9 @@ export const TarjetaProducto: React.FC<PropiedadesTarjetaProducto> = ({
           alt={producto.nombre}
           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
           loading="lazy"
+          onError={(e) => {
+            (e.target as HTMLImageElement).src = '/placeholder.jpg';
+          }}
         />
         
         {/* Degradado sutil para resaltar textos e insignias */}

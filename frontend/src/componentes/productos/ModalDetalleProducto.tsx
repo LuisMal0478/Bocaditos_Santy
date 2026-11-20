@@ -87,6 +87,9 @@ export const ModalDetalleProducto: React.FC<PropiedadesModalDetalleProducto> = (
               src={producto.imagen_url || '/placeholder.jpg'}
               alt={producto.nombre}
               className="w-full h-full object-cover"
+              onError={(e) => {
+                (e.target as HTMLImageElement).src = '/placeholder.jpg';
+              }}
             />
           </div>
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">

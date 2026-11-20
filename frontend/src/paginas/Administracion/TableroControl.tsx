@@ -1125,6 +1125,9 @@ export const TableroControl: React.FC = () => {
                               src={prod.imagen_url || '/placeholder.jpg'}
                               alt={prod.nombre}
                               className="w-full h-full object-cover"
+                              onError={(e) => {
+                                (e.target as HTMLImageElement).src = '/placeholder.jpg';
+                              }}
                             />
                           </div>
                           <div className="flex-1 min-w-0">
@@ -1221,6 +1224,9 @@ export const TableroControl: React.FC = () => {
                                     src={prod.imagen_url || '/placeholder.jpg'}
                                     alt={prod.nombre}
                                     className="w-full h-full object-cover"
+                                    onError={(e) => {
+                                      (e.target as HTMLImageElement).src = '/placeholder.jpg';
+                                    }}
                                   />
                                 </div>
                                 <div>
