@@ -105,6 +105,17 @@ class ConfiguracionNegocio(models.Model):
         default="Explorar catálogo",
         verbose_name="Texto del botón principal del Hero"
     )
+    imagen_hero_url = models.CharField(
+        max_length=500,
+        blank=True,
+        default="/media/productos/pag_1_img_2_X11.jpg",
+        verbose_name="Foto principal de la portada (Hero)"
+    )
+    imagen_hero_id_publico = models.CharField(
+        max_length=255,
+        blank=True,
+        verbose_name="ID público en Cloudinary de la foto del Hero"
+    )
 
     mensaje_anuncio = models.CharField(
         max_length=200,

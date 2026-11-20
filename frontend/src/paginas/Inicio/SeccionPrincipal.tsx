@@ -31,10 +31,10 @@ export const SeccionPrincipal: React.FC = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-          
+
           {/* Columna Izquierda: Mensaje y Llamados a la Acción */}
           <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-            
+
             {/* Pill de Bienvenida / Slogan */}
             <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-orange-100/90 border border-orange-200 text-orange-800 text-xs font-bold tracking-wide shadow-xs animate-in fade-in duration-500">
               <Sparkles className="w-4 h-4 text-orange-500 animate-pulse" />
@@ -81,7 +81,7 @@ export const SeccionPrincipal: React.FC = () => {
                 to={`${RUTAS.CATALOGO}?categoria=servicios-para-eventos`}
                 className="px-3.5 py-1.5 rounded-full bg-white hover:bg-orange-50 text-gray-800 hover:text-orange-600 font-semibold border border-orange-200/80 transition shadow-xs"
               >
-                🎉 Combos Fiesta
+                🎉 Mesa Bufet
               </Link>
             </div>
 
@@ -136,15 +136,18 @@ export const SeccionPrincipal: React.FC = () => {
           {/* Columna Derecha: Composición Fotográfica Gastronómica con Aura Cálida */}
           <div className="lg:col-span-5 relative flex justify-center">
             <div className="relative w-full max-w-md lg:max-w-none">
-              
+
               {/* Tarjeta Fotográfica Principal */}
               <div className="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-4 sm:border-8 border-white aspect-[4/3] bg-orange-100 group">
                 <img
-                  src="/media/productos/pag_1_img_2_X11.jpg"
+                  src={configuracion?.imagen_hero_url || '/media/productos/pag_1_img_2_X11.jpg'}
                   alt="Pasabocas Bocaditos Santy"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  onError={(e) => {
+                    (e.target as HTMLImageElement).src = '/media/productos/pag_1_img_2_X11.jpg';
+                  }}
                 />
-                
+
                 {/* Degradado sutil para legibilidad */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/40 via-transparent to-transparent"></div>
 

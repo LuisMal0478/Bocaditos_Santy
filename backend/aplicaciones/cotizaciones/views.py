@@ -57,6 +57,7 @@ class ConjuntoVistasCotizacionesAdmin(viewsets.ReadOnlyModelViewSet):
     Permite filtrar por estado, consultar detalle histórico y actualizar estados.
     """
     permission_classes = [EsAdministrador]
+    pagination_class = None
 
     def get_queryset(self):
         queryset = Cotizacion.objects.all().prefetch_related('detalles')

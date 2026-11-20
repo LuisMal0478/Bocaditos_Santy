@@ -22,10 +22,13 @@ export const servicioCotizaciones = {
   },
 
   obtenerTodasAdmin: async (estado?: EstadoCotizacion) => {
-    const respuesta = await clienteApi.get<CotizacionResumenAdmin[]>('/cotizaciones/gestion/solicitudes/', {
+    const respuesta = await clienteApi.get<any>('/cotizaciones/gestion/solicitudes/', {
       params: estado ? { estado } : undefined,
     });
-    return Array.isArray(respuesta.data) ? respuesta.data : [];
+    if (respuesta.data && typeof respuesta.data === 'object' && 'results' in respuesta.data && Array.isArray(respuesta.data.results)) {
+      return respuesta.data.results as CotizacionResumenAdmin[];
+    }
+    return Array.isArray(respuesta.data) ? (respuesta.data as CotizacionResumenAdmin[]) : [];
   },
 
   obtenerPorIdAdmin: async (id: number) => {

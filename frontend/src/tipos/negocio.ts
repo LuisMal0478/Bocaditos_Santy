@@ -24,6 +24,8 @@ export interface ConfiguracionNegocio {
   titulo_hero: string;
   subtitulo_hero: string;
   texto_boton_hero: string;
+  imagen_hero_url?: string;
+  imagen_hero_id_publico?: string;
   mensaje_anuncio: string;
   mostrar_anuncio: boolean;
 

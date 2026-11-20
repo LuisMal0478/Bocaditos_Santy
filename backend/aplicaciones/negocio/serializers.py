@@ -6,6 +6,7 @@ from .models import ConfiguracionNegocio
 class SerializadorConfiguracionNegocio(serializers.ModelSerializer):
     """Serializador para consulta pública y actualización administrativa."""
     archivo_logo = serializers.ImageField(write_only=True, required=False, allow_null=True)
+    archivo_imagen_hero = serializers.ImageField(write_only=True, required=False, allow_null=True)
 
     class Meta:
         model = ConfiguracionNegocio
@@ -16,6 +17,9 @@ class SerializadorConfiguracionNegocio(serializers.ModelSerializer):
             'logo_url',
             'logo_id_publico',
             'archivo_logo',
+            'imagen_hero_url',
+            'imagen_hero_id_publico',
+            'archivo_imagen_hero',
             'numero_whatsapp',
             'mensaje_bienvenida_whatsapp',
             'instagram',
@@ -51,6 +55,17 @@ class SerializadorConfiguracionNegocio(serializers.ModelSerializer):
             url, public_id = subir_imagen_producto(archivo_logo, carpeta='bocaditos_santy/logo')
             instance.logo_url = url
             instance.logo_id_publico = public_id
+
+        archivo_hero = validated_data.pop('archivo_imagen_hero', None)
+        if archivo_hero:
+            if instance.imagen_hero_id_publico:
+                try:
+                    eliminar_imagen_segura(instance.imagen_hero_id_publico)
+                except Exception:
+                    pass
+            url_hero, public_id_hero = subir_imagen_producto(archivo_hero, carpeta='bocaditos_santy/hero')
+            instance.imagen_hero_url = url_hero
+            instance.imagen_hero_id_publico = public_id_hero
 
         return super().update(instance, validated_data)
 

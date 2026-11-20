@@ -237,6 +237,12 @@ export const TableroControl: React.FC = () => {
   const [formLogoPreview, setFormLogoPreview] = useState<string | null>(null);
   const [guardandoLogo, setGuardandoLogo] = useState(false);
 
+  // Estados para Gestión de la Foto Principal del Inicio (Hero)
+  const [formHeroArchivo, setFormHeroArchivo] = useState<File | null>(null);
+  const [formHeroUrl, setFormHeroUrl] = useState('');
+  const [formHeroPreview, setFormHeroPreview] = useState<string | null>(null);
+  const [guardandoHero, setGuardandoHero] = useState(false);
+
   // Estados para Perfil de Administrador (Credenciales y Seguridad)
   const [formPerfilUsername, setFormPerfilUsername] = useState('');
   const [formPerfilFirstName, setFormPerfilFirstName] = useState('');
@@ -279,6 +285,7 @@ export const TableroControl: React.FC = () => {
         setFormConfDescripcion(conf.descripcion_negocio || '');
         setFormConfCobertura(conf.zona_cobertura || '');
         setFormLogoUrl(conf.logo_url || '');
+        setFormHeroUrl(conf.imagen_hero_url || '');
 
         // Cargar personalización visual web
         setFormTemaPrincipal(conf.color_principal || '#D63384');
@@ -691,6 +698,78 @@ export const TableroControl: React.FC = () => {
       });
     } finally {
       setGuardandoLogo(false);
+    }
+  };
+
+  const alCambiarArchivoHero = (e: React.ChangeEvent<HTMLInputElement>) => {
+    if (e.target.files && e.target.files[0]) {
+      const archivo = e.target.files[0];
+      setFormHeroArchivo(archivo);
+      setFormHeroPreview(URL.createObjectURL(archivo));
+    }
+  };
+
+  const guardarHeroNegocio = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setGuardandoHero(true);
+    try {
+      if (formHeroArchivo) {
+        const formData = new FormData();
+        formData.append('archivo_imagen_hero', formHeroArchivo);
+        const confActualizada = await actualizarConfiguracion(formData);
+        setConfiguracion(confActualizada);
+        setFormHeroPreview(null);
+        setFormHeroArchivo(null);
+        setMensajeAlerta({
+          tipo: 'exito',
+          texto: '¡Foto principal de portada guardada y actualizada con éxito!',
+        });
+      } else if (formHeroUrl.trim()) {
+        const confActualizada = await actualizarConfiguracion({ imagen_hero_url: formHeroUrl.trim() });
+        setConfiguracion(confActualizada);
+        setFormHeroPreview(null);
+        setMensajeAlerta({
+          tipo: 'exito',
+          texto: '¡Foto principal de portada actualizada con éxito!',
+        });
+      } else {
+        setMensajeAlerta({
+          tipo: 'error',
+          texto: 'Por favor selecciona un archivo o escribe la dirección web de la imagen.',
+        });
+      }
+      cargarDatos();
+    } catch {
+      setMensajeAlerta({
+        tipo: 'error',
+        texto: 'No fue posible actualizar la foto de portada. Intente nuevamente.',
+      });
+    } finally {
+      setGuardandoHero(false);
+    }
+  };
+
+  const seleccionarHeroDesdeProducto = async (url: string) => {
+    if (!url) return;
+    setFormHeroUrl(url);
+    setFormHeroPreview(url);
+    setFormHeroArchivo(null);
+    setGuardandoHero(true);
+    try {
+      const confActualizada = await actualizarConfiguracion({ imagen_hero_url: url });
+      setConfiguracion(confActualizada);
+      setMensajeAlerta({
+        tipo: 'exito',
+        texto: '¡Foto principal de portada actualizada exitosamente a este producto!',
+      });
+      cargarDatos();
+    } catch {
+      setMensajeAlerta({
+        tipo: 'error',
+        texto: 'No fue posible actualizar la foto de portada.',
+      });
+    } finally {
+      setGuardandoHero(false);
     }
   };
 
@@ -1369,8 +1448,8 @@ export const TableroControl: React.FC = () => {
           {pestañaActiva === 'cotizaciones' && (
             <div className="space-y-6">
               
-              {/* Filtro por Estado */}
-              <div className="bg-white p-4 rounded-3xl border border-rosa-100 shadow-sm flex items-center justify-between gap-4">
+              {/* Filtro por Estado y Recargar */}
+              <div className="bg-white p-4 rounded-3xl border border-rosa-100 shadow-sm flex flex-col sm:flex-row items-stretch sm:items-center justify-between gap-3">
                 <div className="flex items-center gap-2 text-xs">
                   <span className="font-bold text-texto-principal">Filtrar por estado:</span>
                   <select
@@ -1378,7 +1457,7 @@ export const TableroControl: React.FC = () => {
                     onChange={(e) => setFiltroEstadoCot(e.target.value)}
                     className="px-3 py-1.5 rounded-xl border border-gray-200 text-xs bg-white text-gray-700 focus:ring-2 focus:ring-rosa-400"
                   >
-                    <option value="todas">Todas las cotizaciones</option>
+                    <option value="todas">Todas las cotizaciones ({cotizaciones.length})</option>
                     <option value="PENDIENTE">Pendientes</option>
                     <option value="EN_REVISION">En revisión</option>
                     <option value="COTIZACION_ENVIADA">Cotización enviada</option>
@@ -1386,11 +1465,92 @@ export const TableroControl: React.FC = () => {
                     <option value="CANCELADA">Canceladas</option>
                   </select>
                 </div>
+
+                <button
+                  type="button"
+                  onClick={cargarDatos}
+                  className="px-3.5 py-1.5 rounded-xl border border-gray-200 text-xs text-gray-600 hover:text-rosa-600 hover:bg-rosa-50 transition flex items-center justify-center gap-1.5 font-medium self-end sm:self-auto"
+                  title="Recargar pedidos desde el servidor"
+                >
+                  <RefreshCw className="w-3.5 h-3.5" />
+                  <span>Recargar Pedidos</span>
+                </button>
               </div>
 
-              {/* Tabla de Cotizaciones */}
-              <div className="bg-white rounded-3xl border border-rosa-100 shadow-sm overflow-hidden">
-                <div className="overflow-x-auto">
+              {/* Lista de Pedidos o Estado Vacío */}
+              {cotizacionesFiltradas.length === 0 ? (
+                <div className="bg-white rounded-3xl border border-rosa-100 p-10 text-center shadow-sm space-y-3">
+                  <Inbox className="w-12 h-12 text-rosa-300 mx-auto" />
+                  <h4 className="font-bold text-gray-800 text-base">Aún no hay pedidos en esta sección</h4>
+                  <p className="text-xs text-gray-500 max-w-sm mx-auto leading-relaxed">
+                    Cuando los clientes armen su cotización y pulsen "Solicitar por WhatsApp", sus pedidos quedarán guardados aquí automáticamente con todos sus datos y productos.
+                  </p>
+                </div>
+              ) : (
+                <>
+                  {/* Vista en Tarjetas para Teléfonos Celulares */}
+                  <div className="grid grid-cols-1 gap-3.5 md:hidden">
+                    {cotizacionesFiltradas.map((c) => {
+                      const telLimpio = c.telefono_whatsapp?.replace(/\D/g, '') || '';
+                      const urlChatCliente = `https://api.whatsapp.com/send?phone=${telLimpio}&text=${encodeURIComponent(`¡Hola ${c.nombre_cliente}! Te escribimos de Bocaditos Santy con respecto a tu solicitud de cotización #${c.codigo_seguimiento}.`)}`;
+
+                      return (
+                        <div key={c.id} className="bg-white rounded-3xl border border-rosa-100 p-4 shadow-sm space-y-3">
+                          <div className="flex items-center justify-between">
+                            <span className="font-mono font-bold text-xs text-rosa-600 bg-rosa-50 px-2.5 py-1 rounded-lg">
+                              {c.codigo_seguimiento}
+                            </span>
+                            <Insignia
+                              variante={
+                                c.estado === 'PENDIENTE'
+                                  ? 'amarillo'
+                                  : c.estado === 'CONFIRMADA'
+                                    ? 'verde'
+                                    : c.estado === 'CANCELADA'
+                                      ? 'gris'
+                                      : 'azul'
+                              }
+                            >
+                              {c.estado_texto}
+                            </Insignia>
+                          </div>
+
+                          <div>
+                            <h4 className="font-bold text-sm text-texto-principal">{c.nombre_cliente}</h4>
+                            <p className="text-xs text-gray-600 mt-1">
+                              📅 <strong>Evento:</strong> {c.fecha_evento} • {c.tipo_evento}
+                            </p>
+                            <p className="text-xs text-rosa-600 font-semibold mt-0.5">
+                              🛍️ {c.total_items} producto(s) en la cotización
+                            </p>
+                          </div>
+
+                          <div className="flex items-center justify-end gap-2 pt-2 border-t border-gray-100">
+                            <a
+                              href={urlChatCliente}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="px-3 py-1.5 rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 text-xs font-bold flex items-center gap-1.5 transition"
+                            >
+                              <MessageCircle className="w-4 h-4" />
+                              <span>WhatsApp</span>
+                            </a>
+                            <button
+                              type="button"
+                              onClick={() => verDetalleCotizacion(c.id)}
+                              className="px-3 py-1.5 rounded-xl bg-rosa-50 hover:bg-rosa-100 text-rosa-700 text-xs font-bold transition"
+                            >
+                              Ver Detalle
+                            </button>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
+
+                  {/* Vista en Tabla para Escritorio */}
+                  <div className="hidden md:block bg-white rounded-3xl border border-rosa-100 shadow-sm overflow-hidden">
+                    <div className="overflow-x-auto">
                   <table className="w-full text-left text-xs sm:text-sm">
                     <thead className="bg-rosa-50/50 text-texto-secundario text-xs uppercase tracking-wider">
                       <tr>
@@ -1465,6 +1625,8 @@ export const TableroControl: React.FC = () => {
                   </table>
                 </div>
               </div>
+            </>
+          )}
             </div>
           )}
 
@@ -1627,6 +1789,132 @@ export const TableroControl: React.FC = () => {
                       icono={<Save className="w-3.5 h-3.5" />}
                     >
                       Guardar Nuevo Logo
+                    </Boton>
+                  </div>
+                </form>
+              </div>
+
+              {/* TARJETA: FOTO PRINCIPAL DE LA PORTADA (HERO INICIO) */}
+              <div className="bg-white rounded-3xl border border-rosa-100 shadow-sm p-6 sm:p-8">
+                <div className="border-b border-gray-100 pb-4 mb-6">
+                  <div className="inline-flex items-center gap-2 text-xs font-bold text-orange-600 uppercase tracking-widest">
+                    <Sparkles className="w-3.5 h-3.5" />
+                    <span>Portada Principal</span>
+                  </div>
+                  <h3 className="font-serif font-bold text-xl text-texto-principal mt-1">
+                    Foto Principal de la Portada (Inicio)
+                  </h3>
+                  <p className="text-xs text-texto-secundario mt-0.5">
+                    Esta es la primera imagen grande que verán tus clientes al entrar a la página web. Puedes elegir cualquiera de tus pasabocas con 1 clic o subir una imagen nueva.
+                  </p>
+                </div>
+
+                <form onSubmit={guardarHeroNegocio} className="space-y-6 text-sm">
+                  {/* Vista Previa Actual */}
+                  <div className="flex flex-col sm:flex-row items-center gap-6 p-4 rounded-2xl bg-orange-50/50 border border-orange-100">
+                    <div className="relative shrink-0 w-full sm:w-56 aspect-[4/3] rounded-2xl overflow-hidden border-2 border-orange-200 bg-white shadow-md">
+                      <img
+                        src={formHeroPreview || configuracion?.imagen_hero_url || '/media/productos/pag_1_img_2_X11.jpg'}
+                        alt="Foto de portada"
+                        className="w-full h-full object-cover"
+                        onError={(e) => {
+                          (e.currentTarget as HTMLImageElement).src = '/media/productos/pag_1_img_2_X11.jpg';
+                        }}
+                      />
+                      {formHeroPreview && (
+                        <span className="absolute bottom-2 left-2 bg-amber-500 text-white text-[9px] font-bold px-2 py-0.5 rounded-full shadow whitespace-nowrap">
+                          Vista previa
+                        </span>
+                      )}
+                    </div>
+
+                    <div className="space-y-3 flex-1 w-full">
+                      <div>
+                        <label className="block text-xs font-bold text-texto-principal uppercase tracking-wider mb-1">
+                          Subir nueva imagen de portada (JPG, PNG o WebP)
+                        </label>
+                        <input
+                          type="file"
+                          accept="image/*"
+                          onChange={alCambiarArchivoHero}
+                          className="block w-full text-xs text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-xl file:border-0 file:text-xs file:font-bold file:bg-orange-500 file:text-white hover:file:bg-orange-600 cursor-pointer"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-xs font-bold text-gray-600 uppercase tracking-wider mb-1">
+                          O escribe una dirección URL de imagen:
+                        </label>
+                        <input
+                          type="text"
+                          value={formHeroUrl}
+                          onChange={(e) => {
+                            setFormHeroUrl(e.target.value);
+                            if (e.target.value) setFormHeroPreview(e.target.value);
+                            else setFormHeroPreview(null);
+                          }}
+                          placeholder="/media/productos/... o https://..."
+                          className="w-full px-4 py-2 rounded-xl border border-gray-200 text-xs focus:ring-2 focus:ring-orange-400 font-mono"
+                        />
+                      </div>
+                    </div>
+                  </div>
+
+                  {/* Selector Rápido con 1 Clic desde el catálogo */}
+                  {productos.some((p) => p.imagen_url) && (
+                    <div>
+                      <label className="block text-xs font-bold text-texto-principal uppercase tracking-wider mb-2">
+                        🧁 O elige con 1 clic la foto de uno de tus pasabocas:
+                      </label>
+                      <div className="grid grid-cols-3 sm:grid-cols-6 gap-2.5 max-h-52 overflow-y-auto p-2.5 bg-gray-50/80 rounded-2xl border border-gray-200">
+                        {productos.filter((p) => p.imagen_url).map((prod) => {
+                          const esSeleccionado = (formHeroUrl || configuracion?.imagen_hero_url) === prod.imagen_url;
+                          return (
+                            <button
+                              key={prod.id}
+                              type="button"
+                              onClick={() => seleccionarHeroDesdeProducto(prod.imagen_url!)}
+                              className={`relative aspect-square rounded-xl overflow-hidden border-2 transition group flex flex-col justify-end ${
+                                esSeleccionado
+                                  ? 'border-orange-500 ring-2 ring-orange-300'
+                                  : 'border-gray-200 hover:border-orange-300'
+                              }`}
+                              title={`Toca para usar la foto de ${prod.nombre} como portada`}
+                            >
+                              <img
+                                src={prod.imagen_url || '/placeholder.jpg'}
+                                alt={prod.nombre}
+                                className="w-full h-full object-cover group-hover:scale-110 transition-transform"
+                                onError={(e) => {
+                                  (e.target as HTMLImageElement).src = '/placeholder.jpg';
+                                }}
+                              />
+                              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-1">
+                                <span className="text-[10px] text-white font-medium block truncate text-center">
+                                  {prod.nombre}
+                                </span>
+                              </div>
+                              {esSeleccionado && (
+                                <div className="absolute top-1 right-1 bg-orange-600 text-white text-[9px] font-bold px-1.5 py-0.5 rounded-full shadow">
+                                  ✓ Activa
+                                </div>
+                              )}
+                            </button>
+                          );
+                        })}
+                      </div>
+                    </div>
+                  )}
+
+                  <div className="flex justify-end">
+                    <Boton
+                      type="submit"
+                      variante="primario"
+                      tamano="sm"
+                      cargando={guardandoHero}
+                      icono={<Save className="w-3.5 h-3.5" />}
+                    >
+                      Guardar Foto de Portada
                     </Boton>
                   </div>
                 </form>
