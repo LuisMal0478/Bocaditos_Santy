@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-principal: #FF6B00;
+  --color-principal-oscuro: #E65100;
+  --color-secundario: #FFF5EA;
+  --color-acento: #FFE4CC;
+  --color-fondo: #FFFDF9;
+  --color-texto: #331B0B;
+  --fuente-titulos: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --fuente-cuerpo: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    color: var(--color-texto);
+    background-color: var(--color-fondo);
+    font-family: var(--fuente-cuerpo);
+  }
+  h1, h2, h3, h4, .font-serif, .font-elegante {
+    font-family: var(--fuente-titulos);
+  }
+}
+
+/* Efectos visuales de pasabocas y gastronomía artesanal */
+.salpicadura-rosa {
+  background: radial-gradient(circle, rgba(255, 228, 204, 0.8) 0%, rgba(255, 245, 234, 0.5) 60%, transparent 100%);
+  border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  animation: flotar-sutil 9s ease-in-out infinite alternate;
+}
+
+.salpicadura-acento {
+  background: radial-gradient(circle, rgba(255, 107, 0, 0.12) 0%, rgba(255, 228, 204, 0.3) 50%, transparent 80%);
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: flotar-rotar 12s ease-in-out infinite alternate;
+}
+
+/* Sombra suave gourmet para tarjetas de pasabocas */
+.sombra-gourmet {
+  box-shadow: 0 10px 25px -5px rgba(255, 107, 0, 0.08), 0 4px 10px -2px rgba(0, 0, 0, 0.03);
+}
+
+.sombra-gourmet-hover {
+  box-shadow: 0 20px 40px -10px rgba(255, 107, 0, 0.2), 0 8px 16px -4px rgba(0, 0, 0, 0.05);
+}
+
+/* Borde festivo ondulado */
+.borde-feston {
+  border-radius: 28px;
+}
+
+/* Efecto de brillo sutil en botones */
+.brillo-hover {
+  position: relative;
+  overflow: hidden;
+}
+.brillo-hover::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent,
+    rgba(255, 255, 255, 0.25),
+    transparent
+  );
+  transform: rotate(30deg) translateY(-100%);
+  transition: transform 0.6s ease;
+}
+.brillo-hover:hover::after {
+  transform: rotate(30deg) translateY(100%);
+}
+
+@keyframes flotar-sutil {
+  0% {
+    transform: rotate(0deg) scale(1) translateY(0);
+    border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+  }
+  100% {
+    transform: rotate(4deg) scale(1.04) translateY(-10px);
+    border-radius: 50% 50% 40% 60% / 60% 40% 60% 40%;
+  }
+}
+
+@keyframes flotar-rotar {
+  0% {
+    transform: rotate(0deg) scale(0.98);
+  }
+  100% {
+    transform: rotate(8deg) scale(1.05) translateX(10px);
+  }
+}
+
