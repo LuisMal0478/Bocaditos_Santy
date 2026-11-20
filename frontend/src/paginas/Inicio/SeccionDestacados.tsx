@@ -26,10 +26,19 @@ export const SeccionDestacados: React.FC = () => {
 
   useEffect(() => {
     setCargando(true);
-    const params = categoriaActiva === 'todos' ? {} : { categoria: categoriaActiva };
+    const params: any = {};
+    if (categoriaActiva !== 'todos') {
+      params.categoria = categoriaActiva;
+    }
     servicioProductos.obtenerTodos(params)
       .then((datos) => {
-        setProductos(datos.slice(0, 8));
+        // En la página de inicio se priorizan los productos marcados como destacados por la administradora
+        let seleccionados = datos.filter((p) => p.esta_destacado && p.esta_activo);
+        // Si aún no ha seleccionado destacados para esta categoría, muestra los primeros activos disponibles
+        if (seleccionados.length === 0) {
+          seleccionados = datos.filter((p) => p.esta_activo);
+        }
+        setProductos(seleccionados.slice(0, 8));
         setCargando(false);
       })
       .catch(() => {

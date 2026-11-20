@@ -22,7 +22,7 @@ class ConjuntoVistasCategoria(viewsets.ModelViewSet):
         es_admin = usuario and usuario.is_authenticated and usuario.is_staff
         ver_todas = self.request.query_params.get('todas') in ('true', '1', 'si')
 
-        if es_admin and ver_todas:
+        if es_admin and (ver_todas or self.action != 'list'):
             return Categoria.objects.all().order_by('orden', 'nombre')
         # En producción y catálogo público, SIEMPRE solo las activas
         return Categoria.objects.filter(esta_activa=True).order_by('orden', 'nombre')

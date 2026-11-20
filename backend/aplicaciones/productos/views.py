@@ -26,11 +26,22 @@ class ConjuntoVistasProducto(viewsets.ModelViewSet):
     def get_object(self):
         """Permite recuperar el producto tanto por slug como por su ID numérico."""
         parametro = self.kwargs.get(self.lookup_field)
-        queryset = self.get_queryset()
+        usuario = self.request.user
+        es_admin = bool(usuario and usuario.is_authenticated and usuario.is_staff)
+
+        # Para administradores o acciones de gestión, buscar en todos los productos (incluidos inactivos)
+        if es_admin or self.action in ['alternar_activo', 'alternar_destacado', 'alternar_disponible']:
+            queryset = Producto.objects.all().select_related('categoria').prefetch_related(
+                'presentaciones',
+                'grupos_variantes__opciones'
+            )
+        else:
+            queryset = self.get_queryset()
+
+        from django.shortcuts import get_object_or_404
         if parametro and parametro.isdigit():
-            from django.shortcuts import get_object_or_404
             return get_object_or_404(queryset, id=int(parametro))
-        return super().get_object()
+        return get_object_or_404(queryset, slug=parametro)
 
     @action(detail=True, methods=['patch'], url_path='alternar-activo')
     def alternar_activo(self, request, slug=None):
@@ -75,7 +86,7 @@ class ConjuntoVistasProducto(viewsets.ModelViewSet):
         es_admin = usuario and usuario.is_authenticated and usuario.is_staff
         es_vista_admin = self.request.query_params.get('admin') in ('true', '1') or self.request.query_params.get('todos') in ('true', '1')
 
-        if es_admin and es_vista_admin:
+        if es_admin and (es_vista_admin or self.action != 'list'):
             queryset = Producto.objects.all().select_related('categoria').prefetch_related(
                 'presentaciones',
                 'grupos_variantes__opciones'

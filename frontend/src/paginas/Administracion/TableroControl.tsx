@@ -158,7 +158,7 @@ export const TableroControl: React.FC = () => {
   // Filtros de Productos
   const [busquedaProd, setBusquedaProd] = useState('');
   const [filtroCatProd, setFiltroCatProd] = useState<string>('todas');
-  const [filtroEstadoProd, setFiltroEstadoProd] = useState<'todos' | 'activos' | 'inactivos'>('todos');
+  const [filtroEstadoProd, setFiltroEstadoProd] = useState<'todos' | 'activos' | 'inactivos' | 'en_inicio'>('todos');
 
   // Filtros de Cotizaciones
   const [filtroEstadoCot, setFiltroEstadoCot] = useState<string>('todas');
@@ -876,6 +876,7 @@ export const TableroControl: React.FC = () => {
 
     const coincideEstado =
       filtroEstadoProd === 'todos' ||
+      (filtroEstadoProd === 'en_inicio' && p.esta_destacado) ||
       (filtroEstadoProd === 'activos' && p.esta_activo) ||
       (filtroEstadoProd === 'inactivos' && !p.esta_activo);
 
@@ -944,7 +945,7 @@ export const TableroControl: React.FC = () => {
           <Sparkles className="w-4 h-4 text-rosa-500" />
           <span>¡Hola! Guía rápida para manejar tu catálogo sin complicaciones técnicas:</span>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3 text-xs text-texto-secundario">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 text-xs text-texto-secundario">
           <div className="bg-white p-3.5 rounded-2xl border border-rosa-100/80 shadow-xs">
             <span className="font-bold text-texto-principal block mb-1 text-xs">
               💰 1. Cambiar Precios o Cantidades
@@ -965,7 +966,16 @@ export const TableroControl: React.FC = () => {
 
           <div className="bg-white p-3.5 rounded-2xl border border-rosa-100/80 shadow-xs">
             <span className="font-bold text-texto-principal block mb-1 text-xs">
-              🎨 3. Cambiar Colores o Letras
+              ⭐ 3. Elegir para el Inicio
+            </span>
+            <p className="text-[11px] leading-relaxed">
+              Pulsa el botón <strong>"⭐ En Inicio"</strong> en cualquier pasaboca para mostrarlo o quitarlo de los favoritos de tu página principal.
+            </p>
+          </div>
+
+          <div className="bg-white p-3.5 rounded-2xl border border-rosa-100/80 shadow-xs">
+            <span className="font-bold text-texto-principal block mb-1 text-xs">
+              🎨 4. Cambiar Colores o Letras
             </span>
             <p className="text-[11px] leading-relaxed">
               En la pestaña <strong>"Colores y Diseño Web"</strong> puedes elegir tu estilo favorito con 1 solo clic o probar nuevos tonos al instante.
@@ -1095,8 +1105,9 @@ export const TableroControl: React.FC = () => {
                     className="px-3 py-2 rounded-xl border border-gray-200 text-xs bg-white text-gray-700 focus:ring-2 focus:ring-rosa-400 focus:outline-none"
                   >
                     <option value="todos">Todos los estados</option>
-                    <option value="activos">Solo activos</option>
-                    <option value="inactivos">Solo inactivos</option>
+                    <option value="en_inicio">⭐ En Inicio (Favoritos)</option>
+                    <option value="activos">✓ En venta (Activos)</option>
+                    <option value="inactivos">✕ Ocultos (Inactivos)</option>
                   </select>
                 </div>
 
@@ -1153,19 +1164,36 @@ export const TableroControl: React.FC = () => {
                         </div>
 
                         {/* Botones de acción directos y claros */}
-                        <div className="pt-2 flex items-center justify-between gap-2 border-t border-gray-100">
-                          {/* Botón Activar / Desactivar */}
-                          <button
-                            type="button"
-                            onClick={() => alternarActivoProducto(prod.id)}
-                            className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1 ${
-                              prod.esta_activo
-                                ? 'bg-emerald-100 text-emerald-800'
-                                : 'bg-gray-100 text-gray-600'
-                            }`}
-                          >
-                            <span>{prod.esta_activo ? '✓ En venta' : '✕ Oculto'}</span>
-                          </button>
+                        <div className="pt-2 flex flex-wrap items-center justify-between gap-2 border-t border-gray-100">
+                          <div className="flex flex-wrap items-center gap-1.5">
+                            {/* Botón Activar / Desactivar */}
+                            <button
+                              type="button"
+                              onClick={() => alternarActivoProducto(prod.id)}
+                              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1 ${
+                                prod.esta_activo
+                                  ? 'bg-emerald-100 text-emerald-800'
+                                  : 'bg-gray-100 text-gray-600'
+                              }`}
+                              title={prod.esta_activo ? 'Clic para ocultar de la tienda' : 'Clic para activar en la tienda'}
+                            >
+                              <span>{prod.esta_activo ? '✓ En venta' : '✕ Oculto'}</span>
+                            </button>
+
+                            {/* Botón Mostrar en Inicio */}
+                            <button
+                              type="button"
+                              onClick={() => alternarDestacadoProducto(prod.id)}
+                              className={`px-3 py-1.5 rounded-xl text-xs font-bold transition flex items-center gap-1 ${
+                                prod.esta_destacado
+                                  ? 'bg-amber-100 text-amber-800 border border-amber-300'
+                                  : 'bg-gray-50 text-gray-500 hover:bg-gray-100 border border-gray-200'
+                              }`}
+                              title="Pulsa para mostrar u ocultar en los favoritos de la página de inicio"
+                            >
+                              <span>{prod.esta_destacado ? '⭐ En Inicio' : '☆ No en Inicio'}</span>
+                            </button>
+                          </div>
 
                           <div className="flex items-center gap-1.5">
                             <button
@@ -1207,7 +1235,7 @@ export const TableroControl: React.FC = () => {
                         <th className="py-3 px-4">Categoría</th>
                         <th className="py-3 px-4">Presentación / Precio</th>
                         <th className="py-3 px-4 text-center">Estado Activo</th>
-                        <th className="py-3 px-4 text-center">Destacado</th>
+                        <th className="py-3 px-4 text-center">En Inicio</th>
                         <th className="py-3 px-4 text-right">Acciones</th>
                       </tr>
                     </thead>
@@ -1280,18 +1308,19 @@ export const TableroControl: React.FC = () => {
                               </button>
                             </td>
 
-                            {/* Toggle Destacado */}
+                            {/* Toggle En Inicio */}
                             <td className="py-3 px-4 text-center">
                               <button
                                 type="button"
                                 onClick={() => alternarDestacadoProducto(prod.id)}
-                                className={`px-2.5 py-1 rounded-full text-xs font-semibold transition ${
+                                className={`px-2.5 py-1 rounded-full text-xs font-bold transition ${
                                   prod.esta_destacado
-                                    ? 'bg-amber-100 text-amber-800'
-                                    : 'bg-gray-50 text-gray-400 hover:bg-gray-100'
+                                    ? 'bg-amber-100 text-amber-800 border border-amber-300'
+                                    : 'bg-gray-50 text-gray-500 hover:bg-gray-100 border border-gray-200'
                                 }`}
+                                title="Clic para mostrar u ocultar en la página de inicio"
                               >
-                                {prod.esta_destacado ? '★ Sí' : '☆ No'}
+                                {prod.esta_destacado ? '⭐ Sí' : '☆ No'}
                               </button>
                             </td>
 
