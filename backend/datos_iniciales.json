@@ -1,0 +1,2451 @@
+[
+{
+  "model": "categorias.categoria",
+  "pk": 1,
+  "fields": {
+    "nombre": "Bocaditos salados",
+    "slug": "bocaditos-salados",
+    "descripcion": "Variedad de pasabocas salados, empanadas, burritos, mini pechuguitas y combinaciones especiales.",
+    "imagen_url": "/media/productos/pag_2_img_6_X10.jpg",
+    "imagen_id_publico": "",
+    "orden": 2,
+    "esta_activa": true,
+    "fecha_creacion": "2026-11-13T19:22:33.777Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.182Z"
+  }
+},
+{
+  "model": "categorias.categoria",
+  "pk": 2,
+  "fields": {
+    "nombre": "Bocaditos",
+    "slug": "bocaditos",
+    "descripcion": "Nuestra selección clásica de pasabocas tradicionales preparados para compartir.",
+    "imagen_url": "/media/productos/pag_1_img_2_X11.jpg",
+    "imagen_id_publico": "",
+    "orden": 1,
+    "esta_activa": true,
+    "fecha_creacion": "2026-11-13T21:10:02.169Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.169Z"
+  }
+},
+{
+  "model": "categorias.categoria",
+  "pk": 3,
+  "fields": {
+    "nombre": "Bocaditos dulces",
+    "slug": "bocaditos-dulces",
+    "descripcion": "Mini tortas, cupcakes, trufas, alfajores, cheesecakes y vasitos de postre para endulzar tus momentos felices.",
+    "imagen_url": "/media/productos/pag_3_img_1_X4.jpg",
+    "imagen_id_publico": "",
+    "orden": 3,
+    "esta_activa": true,
+    "fecha_creacion": "2026-11-13T21:10:02.196Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.196Z"
+  }
+},
+{
+  "model": "categorias.categoria",
+  "pk": 4,
+  "fields": {
+    "nombre": "Bebidas",
+    "slug": "bebidas",
+    "descripcion": "Sodas italianas refrescantes, jugos naturales y cócteles para acompañar tus celebraciones.",
+    "imagen_url": "/media/productos/pag_6_img_3_X7.png",
+    "imagen_id_publico": "",
+    "orden": 4,
+    "esta_activa": true,
+    "fecha_creacion": "2026-11-13T21:10:02.208Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.208Z"
+  }
+},
+{
+  "model": "categorias.categoria",
+  "pk": 5,
+  "fields": {
+    "nombre": "Servicios para eventos",
+    "slug": "servicios-para-eventos",
+    "descripcion": "Montaje de mesas de pasabocas sencillas y con accesorios de lujo, y estaciones de café.",
+    "imagen_url": "/media/productos/pag_7_img_2_X6.png",
+    "imagen_id_publico": "",
+    "orden": 5,
+    "esta_activa": true,
+    "fecha_creacion": "2026-11-13T21:10:02.220Z",
+    "fecha_actualizacion": "2026-11-18T00:45:05.293Z"
+  }
+},
+{
+  "model": "categorias.categoria",
+  "pk": 6,
+  "fields": {
+    "nombre": "prueba",
+    "slug": "luis",
+    "descripcion": "",
+    "imagen_url": "",
+    "imagen_id_publico": "",
+    "orden": 8,
+    "esta_activa": false,
+    "fecha_creacion": "2026-11-17T03:25:38.288Z",
+    "fecha_actualizacion": "2026-11-17T03:28:06.109Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 1,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Empanadas Caseras",
+    "slug": "empanadas-caseras",
+    "descripcion": "Deliciosas empanadas tradicionales para eventos",
+    "imagen_url": "",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": false,
+    "fecha_eliminacion": "2026-11-17T00:43:50.098Z",
+    "fecha_creacion": "2026-11-13T19:22:33.792Z",
+    "fecha_actualizacion": "2026-11-17T00:43:50.098Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 2,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Brochetas de pollo",
+    "slug": "brochetas-de-pollo",
+    "descripcion": "Deliciosas brochetas de pollo sazonadas, ideales para pasabocas de eventos.",
+    "imagen_url": "/media/productos/pag_1_img_4_X21.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.240Z",
+    "fecha_actualizacion": "2026-11-18T00:45:05.232Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 3,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Brochetas de camarones",
+    "slug": "brochetas-de-camarones",
+    "descripcion": "Brochetas de camarón fresco preparadas al punto para celebraciones especiales.",
+    "imagen_url": "/media/productos/pag_1_img_3_X19.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.271Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.271Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 4,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Brochetas de frutas",
+    "slug": "brochetas-de-frutas",
+    "descripcion": "Colorida y fresca combinación de frutas de temporada en brocheta.",
+    "imagen_url": "/media/productos/pag_1_img_2_X11.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.295Z",
+    "fecha_actualizacion": "2026-11-18T00:45:05.246Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 5,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Brochetas de camarones hawaianos",
+    "slug": "brochetas-de-camarones-hawaianos",
+    "descripcion": "Camarones con piña dorada en brocheta agridulce.",
+    "imagen_url": "/media/productos/pag_1_img_5_X23.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.330Z",
+    "fecha_actualizacion": "2026-11-14T20:56:44.258Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 6,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Brochetas de queso con tomate cherry",
+    "slug": "brochetas-de-queso-con-tomate-cherry",
+    "descripcion": "Clásica brocheta fresca de dados de queso y tomates cherry maduros.",
+    "imagen_url": "/media/productos/pag_1_img_6_X25.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.361Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.361Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 7,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Bolitas de carne",
+    "slug": "bolitas-de-carne",
+    "descripcion": "Albondiguitas de carne sazonadas, crujientes por fuera y jugosas por dentro.",
+    "imagen_url": "/media/productos/pag_1_img_7_X27.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.393Z",
+    "fecha_actualizacion": "2026-11-14T20:22:22.469Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 8,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Bolitas de pollo",
+    "slug": "bolitas-de-pollo",
+    "descripcion": "Suaves y crocantes bolitas preparadas a base de pollo sazonado.",
+    "imagen_url": "/media/productos/pag_1_img_8_X29.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.421Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.421Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 9,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Mini sándwich",
+    "slug": "mini-sandwich",
+    "descripcion": "Sándwiches en tamaño pasaboca con jamón, queso y aderezos especiales.",
+    "imagen_url": "/media/productos/pag_1_img_9_X32.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.454Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.454Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 10,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Mini croissant relleno de pollo",
+    "slug": "mini-croissant-relleno-de-pollo",
+    "descripcion": "Croissants hojaldrados rellenos de pechuga de pollo desmechada con salsa de la casa.",
+    "imagen_url": "/media/productos/pag_1_img_10_X34.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.479Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.479Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 11,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Mini hamburguesas",
+    "slug": "mini-hamburguesas",
+    "descripcion": "Mini hamburguesas gourmet con carne sazonada, queso y vegetales frescos.",
+    "imagen_url": "/media/productos/pag_1_img_11_X36.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.518Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.518Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 12,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Canastas de carne hechas de tortillas",
+    "slug": "canastas-de-carne-hechas-de-tortillas",
+    "descripcion": "Canastitas crujientes de tortilla rellenas de carne desmechada sazonada.",
+    "imagen_url": "/media/productos/pag_1_img_12_X38.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.562Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.562Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 13,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Mini perros calientes",
+    "slug": "mini-perros-calientes",
+    "descripcion": "Mini perros calientes con salchicha seleccionada y salsas.",
+    "imagen_url": "/media/productos/pag_1_img_13_X40.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.591Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.591Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 14,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Canastas de plátano con camarones y guacamole",
+    "slug": "canastas-de-platano-con-camarones-y-guacamole",
+    "descripcion": "Tostones en forma de canastilla con camarones y toque de guacamole fresco.",
+    "imagen_url": "/media/productos/pag_1_img_14_X42.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.619Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.619Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 15,
+  "fields": {
+    "categoria": 2,
+    "nombre": "Canastas de plátano con pollo",
+    "slug": "canastas-de-platano-con-pollo",
+    "descripcion": "Canastas crocantes de plátano verde rellenas de pollo desmechado.",
+    "imagen_url": "/media/productos/pag_1_img_15_X44.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.648Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.648Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 16,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Mini burritos",
+    "slug": "mini-burritos",
+    "descripcion": "Tortillas de harina envueltas con relleno sazonado en presentación mini.",
+    "imagen_url": "/media/productos/pag_2_img_1_X4.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.682Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.682Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 17,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Rollitos de jamón con queso",
+    "slug": "rollitos-de-jamon-con-queso",
+    "descripcion": "Rollitos finamente preparados con jamón seleccionado y queso fundente.",
+    "imagen_url": "/media/productos/pag_2_img_2_X6.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.712Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.712Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 18,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Vasitos de charcutería",
+    "slug": "vasitos-de-charcuteria",
+    "descripcion": "Elegantes vasitos individuales con quesos, carnes frías y frutos secos.",
+    "imagen_url": "/media/productos/pag_2_img_3_X7.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.740Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.740Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 19,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Montaditos",
+    "slug": "montaditos",
+    "descripcion": "Bocados sobre pan tostado con variedad de aderezos y jamones.",
+    "imagen_url": "/media/productos/pag_2_img_4_X8.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.771Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.771Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 20,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Causa limeña",
+    "slug": "causa-limena",
+    "descripcion": "Bocaditos de puré de papa sazonado con ají amarillo y relleno de pollo.",
+    "imagen_url": "/media/productos/pag_2_img_5_X9.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.801Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.802Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 21,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Empanaditas de cóctel",
+    "slug": "empanaditas-de-coctel",
+    "descripcion": "Empanadas tradicionales colombianas de maíz, crujientes y con diversos rellenos.",
+    "imagen_url": "/media/productos/pag_2_img_6_X10.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.828Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.828Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 22,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Dedos de queso y jamón horneados",
+    "slug": "dedos-de-queso-y-jamon-horneados",
+    "descripcion": "Deditos de masa suave horneados con relleno de queso y jamón.",
+    "imagen_url": "/media/productos/pag_2_img_7_X11.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.932Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.932Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 23,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Medallones de salchichas",
+    "slug": "medallones-de-salchichas",
+    "descripcion": "Bocadillos en hojaldre o masa rellenos de salchicha especial.",
+    "imagen_url": "/media/productos/pag_2_img_8_X12.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.969Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.969Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 24,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Combo surtido x 100 unidades",
+    "slug": "combo-surtido-x-100-unidades",
+    "descripcion": "Gran combo para celebraciones: incluye empanadas hawaianas, bolitas de pollo, mini pinchos de pollo, medallones de salchichas y dedos de queso.",
+    "imagen_url": "/media/productos/pag_2_img_9_X13.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:02.997Z",
+    "fecha_actualizacion": "2026-11-13T21:10:02.997Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 25,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Mini rollitos de carne en salsa de ciruelas",
+    "slug": "mini-rollitos-de-carne-en-salsa-de-ciruelas",
+    "descripcion": "Rollitos de carne rellenos de jamón y queso bañados en una suave salsa dulce de ciruelas.",
+    "imagen_url": "/media/productos/pag_5_img_1_X4.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.028Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.028Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 26,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Mini pechuguitas gratinadas",
+    "slug": "mini-pechuguitas-gratinadas",
+    "descripcion": "Bocaditos de pechuga de pollo cubiertos con queso fundido y gratinado al horno.",
+    "imagen_url": "/media/productos/pag_5_img_2_X6.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.057Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.057Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 27,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Champiñones rellenos",
+    "slug": "champinones-rellenos",
+    "descripcion": "Champiñones horneados rellenos de queso y finas hierbas.",
+    "imagen_url": "/media/productos/pag_5_img_3_X7.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.089Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.089Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 28,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Canastas de pan tostado con dip de pollo y piña",
+    "slug": "canastas-de-pan-tostado-con-dip-de-pollo-y-pina",
+    "descripcion": "Crujientes canastas tostadas rellenas de dip agridulce de pollo y piña.",
+    "imagen_url": "/media/productos/pag_5_img_4_X8.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.119Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.119Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 29,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Bombones de pollo en salsa de yogur griego",
+    "slug": "bombones-de-pollo-en-salsa-de-yogur-griego",
+    "descripcion": "Bocados de pollo dorado acompañados de cremosa salsa a base de yogur griego y especias.",
+    "imagen_url": "/media/productos/pag_5_img_5_X9.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.155Z",
+    "fecha_actualizacion": "2026-11-20T02:48:09.874Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 30,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Brochetas de queso búfalo con tomate cherry",
+    "slug": "brochetas-de-queso-bufalo-con-tomate-cherry",
+    "descripcion": "Elegante brocheta con queso de búfala, tomate cherry y reducción balsámica.",
+    "imagen_url": "/media/productos/pag_5_img_6_X10.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.186Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.186Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 31,
+  "fields": {
+    "categoria": 1,
+    "nombre": "Mini aborrajados en salsa de mora",
+    "slug": "mini-aborrajados-en-salsa-de-mora",
+    "descripcion": "Clásicos bocaditos de plátano maduro con queso costeño acompañados de salsa de mora.",
+    "imagen_url": "/media/productos/pag_5_img_7_X11.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.212Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.212Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 32,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Mini torta red velvet",
+    "slug": "mini-torta-red-velvet",
+    "descripcion": "Suave bizcocho aterciopelado de red velvet con crema frosting.",
+    "imagen_url": "/media/productos/pag_3_img_1_X4.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.236Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.236Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 33,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Mini torta de vainilla",
+    "slug": "mini-torta-de-vainilla",
+    "descripcion": "Esponjosa torta individual con sabor a vainilla tradicional.",
+    "imagen_url": "/media/productos/pag_3_img_2_X6.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.264Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.264Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 34,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Cupcakes decorados",
+    "slug": "cupcakes-decorados",
+    "descripcion": "Cupcakes individuales decorados con betún suave para celebraciones.",
+    "imagen_url": "/media/productos/pag_3_img_3_X7.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.296Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.296Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 35,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Mini torta de chocolate",
+    "slug": "mini-torta-de-chocolate",
+    "descripcion": "Torta húmeda de chocolate con cobertura cremosa.",
+    "imagen_url": "/media/productos/pag_3_img_4_X8.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.327Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.327Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 36,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Shots de frutas",
+    "slug": "shots-de-frutas",
+    "descripcion": "Refrescantes vasitos con selección picada de frutas.",
+    "imagen_url": "/media/productos/pag_3_img_5_X9.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.355Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.355Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 37,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Trufas de chocolate",
+    "slug": "trufas-de-chocolate",
+    "descripcion": "Exquisitas trufas artesanales de cacao con diversas coberturas.",
+    "imagen_url": "/media/productos/pag_3_img_6_X10.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.385Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.385Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 38,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Cake pops",
+    "slug": "cake-pops",
+    "descripcion": "Bolitas de bizcocho cubiertas de chocolate en paleta.",
+    "imagen_url": "/media/productos/pag_3_img_7_X11.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.417Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.417Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 39,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Oreo pops",
+    "slug": "oreo-pops",
+    "descripcion": "Galletas Oreo cubiertas con chocolate y detalles decorativos.",
+    "imagen_url": "/media/productos/pag_3_img_8_X12.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.443Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.443Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 40,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Mini pancakes",
+    "slug": "mini-pancakes",
+    "descripcion": "Torrecitas de mini panquecas servidas para mesas dulces.",
+    "imagen_url": "/media/productos/pag_3_img_9_X13.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.467Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.467Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 41,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Mendigos de chocolates",
+    "slug": "mendigos-de-chocolates",
+    "descripcion": "Discos de chocolate coronados con frutos secos variados.",
+    "imagen_url": "/media/productos/pag_3_img_10_X14.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.498Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.498Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 42,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Tartaletas de frutas",
+    "slug": "tartaletas-de-frutas",
+    "descripcion": "Base crujiente de masa rellena de crema pastelera y fruta fresca.",
+    "imagen_url": "/media/productos/pag_4_img_1_X4.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.533Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.533Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 43,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Volovanes con crema dulce y arándanos",
+    "slug": "volovanes-con-crema-dulce-y-arandanos",
+    "descripcion": "Hojaldre volován relleno de crema dulce y arándanos frescos.",
+    "imagen_url": "/media/productos/pag_4_img_2_X6.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.561Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.561Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 44,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Cheesecake individual",
+    "slug": "cheesecake-individual",
+    "descripcion": "Cremoso pastel de queso sobre base crocante con mermelada de fruta.",
+    "imagen_url": "/media/productos/pag_4_img_3_X7.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.586Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.586Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 45,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Bombones de masmelos con chispas de colores",
+    "slug": "bombones-de-masmelos-con-chispas-de-colores",
+    "descripcion": "Masmelos esponjosos decorados con chispas de colores vivos.",
+    "imagen_url": "/media/productos/pag_4_img_4_X8.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.671Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.671Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 46,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Masmelos cubiertos de chocolate blanco y arequipe",
+    "slug": "masmelos-cubiertos-de-chocolate-blanco-y-arequipe",
+    "descripcion": "Masmelos glaseados con arequipe y chocolate blanco.",
+    "imagen_url": "/media/productos/pag_4_img_6_X10.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.698Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.698Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 47,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Alfajores artesanales",
+    "slug": "alfajores-artesanales",
+    "descripcion": "Galletas suaves de maicena rellenas con arequipe y coco rallado.",
+    "imagen_url": "/media/productos/pag_4_img_8_X12.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.724Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.724Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 48,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Conos de crispetas",
+    "slug": "conos-de-crispetas",
+    "descripcion": "Conos individuales con crispetas dulces o saladas.",
+    "imagen_url": "/media/productos/pag_4_img_9_X13.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.751Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.751Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 49,
+  "fields": {
+    "categoria": 3,
+    "nombre": "Postres en vasito 1.5 oz",
+    "slug": "postres-en-vasito-15-oz",
+    "descripcion": "Variedad de vasitos de postre para mesas de dulces en diversas recetas clásicas.",
+    "imagen_url": "/media/productos/pag_4_img_10_X14.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.780Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.780Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 50,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Jugos de naranja en envase de vidrio",
+    "slug": "jugos-de-naranja-en-envase-de-vidrio",
+    "descripcion": "Jugo de naranja natural servido en elegante botella de vidrio.",
+    "imagen_url": "/media/productos/pag_6_img_1_X4.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.881Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.881Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 51,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Jugos naturales en envase plástico",
+    "slug": "jugos-naturales-en-envase-plastico",
+    "descripcion": "Refrescantes jugos de fruta natural en botella individual.",
+    "imagen_url": "/media/productos/pag_6_img_2_X6.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.903Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.903Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 52,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Sodas italianas",
+    "slug": "sodas-italianas",
+    "descripcion": "Bebida gasificada artesanal con jarabes frutales refrescantes.",
+    "imagen_url": "/media/productos/pag_6_img_3_X7.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.927Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.927Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 53,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Mimosas",
+    "slug": "mimosas",
+    "descripcion": "Cóctel clásico de vino espumoso y jugo de naranja.",
+    "imagen_url": "/media/productos/pag_6_img_4_X8.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:03.998Z",
+    "fecha_actualizacion": "2026-11-13T21:10:03.998Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 54,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Trago de whisky a las rocas",
+    "slug": "trago-de-whisky-a-las-rocas",
+    "descripcion": "Servicio de whisky con hielo para eventos.",
+    "imagen_url": "/media/productos/pag_6_img_5_X9.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:04.020Z",
+    "fecha_actualizacion": "2026-11-13T21:10:04.020Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 55,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Mojitos",
+    "slug": "mojitos",
+    "descripcion": "Cóctel tradicional con hierbabuena, limón, azúcar y ron.",
+    "imagen_url": "/media/productos/pag_6_img_6_X10.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:04.045Z",
+    "fecha_actualizacion": "2026-11-13T21:10:04.045Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 56,
+  "fields": {
+    "categoria": 4,
+    "nombre": "Piña colada",
+    "slug": "pina-colada",
+    "descripcion": "Cóctel cremoso con piña, crema de coco y toque de ron.",
+    "imagen_url": "/media/productos/pag_6_img_7_X11.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:04.068Z",
+    "fecha_actualizacion": "2026-11-13T21:10:04.068Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 57,
+  "fields": {
+    "categoria": 5,
+    "nombre": "Mesas de pasabocas",
+    "slug": "mesas-de-pasabocas",
+    "descripcion": "Montaje completo de mesa decorada con variedad de pasabocas dulces y salados para tu evento.",
+    "imagen_url": "/media/productos/pag_7_img_2_X6.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": false,
+    "fecha_eliminacion": "2026-11-18T00:52:27.934Z",
+    "fecha_creacion": "2026-11-13T21:10:04.095Z",
+    "fecha_actualizacion": "2026-11-18T00:52:27.935Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 58,
+  "fields": {
+    "categoria": 5,
+    "nombre": "Estación de café",
+    "slug": "estacion-de-cafe",
+    "descripcion": "Estación equipada con café caliente, termos, tazas y acompañamientos para reuniones.",
+    "imagen_url": "/media/productos/pag_7_img_1_X4.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:04.118Z",
+    "fecha_actualizacion": "2026-11-18T00:45:05.257Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 59,
+  "fields": {
+    "categoria": 5,
+    "nombre": "Mesa de pasabocas tipo sencilla",
+    "slug": "mesa-de-pasabocas-tipo-sencilla",
+    "descripcion": "Presentación limpia y atractiva de pasabocas en bandejas para reuniones pequeñas o medianas.",
+    "imagen_url": "/media/productos/pag_7_img_3_X7.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:04.141Z",
+    "fecha_actualizacion": "2026-11-13T21:10:04.141Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 60,
+  "fields": {
+    "categoria": 5,
+    "nombre": "Mesas de pasabocas con accesorios de lujo",
+    "slug": "mesas-de-pasabocas-con-accesorios-de-lujo",
+    "descripcion": "Montaje premium con elevadores, vajilla fina, accesorios dorados/plateados y decoración floral.",
+    "imagen_url": "/media/productos/pag_7_img_2_X6.png",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-13T21:10:04.167Z",
+    "fecha_actualizacion": "2026-11-18T00:45:05.267Z"
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 1,
+  "fields": {
+    "producto": 1,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "19000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 2,
+  "fields": {
+    "producto": 1,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "1200.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 3,
+  "fields": {
+    "producto": 2,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "44000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 4,
+  "fields": {
+    "producto": 3,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "76000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 5,
+  "fields": {
+    "producto": 4,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "56000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 6,
+  "fields": {
+    "producto": 5,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "50000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 7,
+  "fields": {
+    "producto": 6,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "40000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 8,
+  "fields": {
+    "producto": 7,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "37000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 9,
+  "fields": {
+    "producto": 8,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "34000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 10,
+  "fields": {
+    "producto": 9,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "42000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 11,
+  "fields": {
+    "producto": 10,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "2400.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 12,
+  "fields": {
+    "producto": 10,
+    "nombre": "Bandeja x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "48000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 13,
+  "fields": {
+    "producto": 11,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "2800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 14,
+  "fields": {
+    "producto": 11,
+    "nombre": "Bandeja x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "56000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 15,
+  "fields": {
+    "producto": 12,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "49000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 16,
+  "fields": {
+    "producto": 13,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "40000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 17,
+  "fields": {
+    "producto": 14,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "64000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 18,
+  "fields": {
+    "producto": 15,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "44000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 19,
+  "fields": {
+    "producto": 16,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "43000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 20,
+  "fields": {
+    "producto": 17,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "36000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 21,
+  "fields": {
+    "producto": 18,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "68000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 22,
+  "fields": {
+    "producto": 19,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "46000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 23,
+  "fields": {
+    "producto": 20,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "74000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 24,
+  "fields": {
+    "producto": 21,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "19000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 25,
+  "fields": {
+    "producto": 22,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "19000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 26,
+  "fields": {
+    "producto": 23,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "18900.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 27,
+  "fields": {
+    "producto": 24,
+    "nombre": "Combo especial x 100 unidades",
+    "cantidad_unidades": 100,
+    "precio": "88000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 28,
+  "fields": {
+    "producto": 25,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "51000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 29,
+  "fields": {
+    "producto": 26,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "76000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 30,
+  "fields": {
+    "producto": 27,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "70000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 31,
+  "fields": {
+    "producto": 28,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "58000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 32,
+  "fields": {
+    "producto": 29,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "4200.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 33,
+  "fields": {
+    "producto": 30,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "4800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 34,
+  "fields": {
+    "producto": 31,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "62000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 35,
+  "fields": {
+    "producto": 32,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "5100.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 36,
+  "fields": {
+    "producto": 33,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "4200.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 37,
+  "fields": {
+    "producto": 34,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "2600.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 38,
+  "fields": {
+    "producto": 35,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "2800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 39,
+  "fields": {
+    "producto": 36,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "2800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 40,
+  "fields": {
+    "producto": 37,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "39000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 41,
+  "fields": {
+    "producto": 38,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "46000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 42,
+  "fields": {
+    "producto": 39,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "46000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 43,
+  "fields": {
+    "producto": 40,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "46000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 44,
+  "fields": {
+    "producto": 41,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "48500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 45,
+  "fields": {
+    "producto": 42,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "42000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 46,
+  "fields": {
+    "producto": 43,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "48000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 47,
+  "fields": {
+    "producto": 44,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "4800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 48,
+  "fields": {
+    "producto": 45,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "31000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 49,
+  "fields": {
+    "producto": 46,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "42000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 50,
+  "fields": {
+    "producto": 47,
+    "nombre": "Paquete x 20 unidades",
+    "cantidad_unidades": 20,
+    "precio": "38000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 51,
+  "fields": {
+    "producto": 48,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "2300.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 52,
+  "fields": {
+    "producto": 49,
+    "nombre": "Por vasito individual (1.5 oz)",
+    "cantidad_unidades": 1,
+    "precio": "2300.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 53,
+  "fields": {
+    "producto": 50,
+    "nombre": "Por envase de vidrio",
+    "cantidad_unidades": 1,
+    "precio": "6000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 54,
+  "fields": {
+    "producto": 51,
+    "nombre": "Por envase plástico",
+    "cantidad_unidades": 1,
+    "precio": "2500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 55,
+  "fields": {
+    "producto": 52,
+    "nombre": "Por copa / vaso",
+    "cantidad_unidades": 1,
+    "precio": "7800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 56,
+  "fields": {
+    "producto": 53,
+    "nombre": "Por copa",
+    "cantidad_unidades": 1,
+    "precio": "13000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 57,
+  "fields": {
+    "producto": 54,
+    "nombre": "Por trago",
+    "cantidad_unidades": 1,
+    "precio": "14000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 58,
+  "fields": {
+    "producto": 55,
+    "nombre": "Por vaso",
+    "cantidad_unidades": 1,
+    "precio": "13000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 59,
+  "fields": {
+    "producto": 56,
+    "nombre": "Por copa",
+    "cantidad_unidades": 1,
+    "precio": "13800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "PENDIENTE",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 60,
+  "fields": {
+    "producto": 57,
+    "nombre": "Servicio personalizado según evento",
+    "cantidad_unidades": 1,
+    "precio": null,
+    "tipo_precio": "A_COTIZAR",
+    "estado_verificacion_precio": "NO_APLICA",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 61,
+  "fields": {
+    "producto": 58,
+    "nombre": "Estación de café para eventos",
+    "cantidad_unidades": 1,
+    "precio": null,
+    "tipo_precio": "A_COTIZAR",
+    "estado_verificacion_precio": "NO_APLICA",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 62,
+  "fields": {
+    "producto": 59,
+    "nombre": "Montaje sencillo de pasabocas",
+    "cantidad_unidades": 1,
+    "precio": null,
+    "tipo_precio": "A_COTIZAR",
+    "estado_verificacion_precio": "NO_APLICA",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 63,
+  "fields": {
+    "producto": 60,
+    "nombre": "Montaje con accesorios de lujo",
+    "cantidad_unidades": 1,
+    "precio": null,
+    "tipo_precio": "A_COTIZAR",
+    "estado_verificacion_precio": "NO_APLICA",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 64,
+  "fields": {
+    "producto": 2,
+    "nombre": "Por unidad",
+    "cantidad_unidades": 1,
+    "precio": "44000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.grupovariante",
+  "pk": 1,
+  "fields": {
+    "producto": 1,
+    "nombre": "Sabor",
+    "es_obligatorio": true,
+    "permite_multiple": false,
+    "orden": 0,
+    "esta_activo": true
+  }
+},
+{
+  "model": "productos.grupovariante",
+  "pk": 2,
+  "fields": {
+    "producto": 21,
+    "nombre": "Sabor de relleno",
+    "es_obligatorio": true,
+    "permite_multiple": false,
+    "orden": 0,
+    "esta_activo": true
+  }
+},
+{
+  "model": "productos.grupovariante",
+  "pk": 3,
+  "fields": {
+    "producto": 44,
+    "nombre": "Sabor de cobertura",
+    "es_obligatorio": true,
+    "permite_multiple": false,
+    "orden": 0,
+    "esta_activo": true
+  }
+},
+{
+  "model": "productos.grupovariante",
+  "pk": 4,
+  "fields": {
+    "producto": 49,
+    "nombre": "Sabor de postre",
+    "es_obligatorio": true,
+    "permite_multiple": false,
+    "orden": 0,
+    "esta_activo": true
+  }
+},
+{
+  "model": "productos.grupovariante",
+  "pk": 5,
+  "fields": {
+    "producto": 52,
+    "nombre": "Sabor de soda",
+    "es_obligatorio": true,
+    "permite_multiple": false,
+    "orden": 0,
+    "esta_activo": true
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 1,
+  "fields": {
+    "grupo_variante": 1,
+    "nombre": "Pollo",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 2,
+  "fields": {
+    "grupo_variante": 1,
+    "nombre": "Carne",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 3,
+  "fields": {
+    "grupo_variante": 1,
+    "nombre": "Queso Maíz",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 4,
+  "fields": {
+    "grupo_variante": 2,
+    "nombre": "Pollo",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 5,
+  "fields": {
+    "grupo_variante": 2,
+    "nombre": "Carne",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 6,
+  "fields": {
+    "grupo_variante": 2,
+    "nombre": "Queso y maíz",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 7,
+  "fields": {
+    "grupo_variante": 2,
+    "nombre": "Hawaiana",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 3
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 8,
+  "fields": {
+    "grupo_variante": 3,
+    "nombre": "Mora",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 9,
+  "fields": {
+    "grupo_variante": 3,
+    "nombre": "Fresa",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 10,
+  "fields": {
+    "grupo_variante": 3,
+    "nombre": "Chocolate",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 11,
+  "fields": {
+    "grupo_variante": 4,
+    "nombre": "Mora",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 12,
+  "fields": {
+    "grupo_variante": 4,
+    "nombre": "Fresa",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 13,
+  "fields": {
+    "grupo_variante": 4,
+    "nombre": "Maracuyá",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 14,
+  "fields": {
+    "grupo_variante": 4,
+    "nombre": "Limón",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 3
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 15,
+  "fields": {
+    "grupo_variante": 4,
+    "nombre": "Tres Leches",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 4
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 16,
+  "fields": {
+    "grupo_variante": 4,
+    "nombre": "Napoleón",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 5
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 17,
+  "fields": {
+    "grupo_variante": 5,
+    "nombre": "Frutos rojos",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 0
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 18,
+  "fields": {
+    "grupo_variante": 5,
+    "nombre": "Limón",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.opcionvariante",
+  "pk": 19,
+  "fields": {
+    "grupo_variante": 5,
+    "nombre": "Frutos amarillos",
+    "precio_adicional": "0.00",
+    "esta_disponible": true,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "negocio.configuracionnegocio",
+  "pk": 1,
+  "fields": {
+    "nombre_negocio": "Bocaditos Santy",
+    "eslogan": "Momentos felices garantizados",
+    "logo_url": "/logo-bocaditos-santy.jpg",
+    "logo_id_publico": "",
+    "numero_whatsapp": "+573018922819",
+    "mensaje_bienvenida_whatsapp": "¡Hola Bocaditos Santy! Vengo desde su catálogo web y deseo solicitar la cotización para mi evento.",
+    "instagram": "@bocaditossanty",
+    "facebook": "BocaditosSanty",
+    "email_contacto": "",
+    "descripcion_negocio": "En Bocaditos Santy hacemos de cada celebración un momento especial con deliciosos pasabocas preparados con amor y dedicación para todo tipo de eventos.",
+    "informacion_contacto": "",
+    "zona_cobertura": "Popayan",
+    "color_principal": "#FF6B00",
+    "color_secundario": "#FFF5EA",
+    "color_acento": "#FFE4CC",
+    "color_fondo": "#FFFDF9",
+    "color_texto": "#331B0B",
+    "fuente_titulos": "Plus Jakarta Sans",
+    "fuente_cuerpo": "Plus Jakarta Sans",
+    "titulo_hero": "El snack perfecto para cualquier ocasión",
+    "subtitulo_hero": "Pasabocas que hacen la vida más deliciosa. Crujientes, frescos y con el mejor sabor, preparados con amor para tus reuniones, cumpleaños y celebraciones especiales.",
+    "texto_boton_hero": "Haz tu pedido",
+    "mensaje_anuncio": "¡Haz tu pedido con anticipación para tus eventos! WhatsApp directo: 316 4486299",
+    "mostrar_anuncio": false,
+    "fecha_actualizacion": "2026-11-20T03:02:14.707Z"
+  }
+}
+]
