@@ -5,6 +5,10 @@
       "destination": "/sitemap.xml"
     },
     {
+      "source": "/google01b4f9d015a56090.html",
+      "destination": "/google01b4f9d015a56090.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
