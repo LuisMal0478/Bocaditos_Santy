@@ -7,8 +7,8 @@ pip install -r backend/requirements.txt
 python backend/manage.py collectstatic --no-input
 python backend/manage.py migrate
 
-# Cargar catálogo y configuración de negocio inicial SOLO si la base de datos está vacía
-python backend/manage.py shell -c "from aplicaciones.categorias.models import Categoria; from django.core.management import call_command; Categoria.objects.exists() or call_command('loaddata', 'backend/datos_iniciales.json')" || true
+# Sincronizar catálogo de forma segura (agrega nuevos productos y categorías sin sobreescribir ajustes del usuario)
+python backend/manage.py sincronizar_catalogo || true
 
 # Crear superusuario automáticamente si se configuran variables en Render/Railway
 if [ -n "$DJANGO_SUPERUSER_USERNAME" ] && [ -n "$DJANGO_SUPERUSER_PASSWORD" ]; then
