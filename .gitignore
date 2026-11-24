@@ -94,9 +94,11 @@ pnpm-debug.log*
 # Vercel CLI cache y despliegues
 .vercel
 
-# ==============================================================================
-# SISTEMA OPERATIVO Y EDITORES
-# ==============================================================================
+# Archivos temporales y scratch
+scratch/
+scratch*/
+*.pdf
+
 .DS_Store
 .DS_Store?
 ._*

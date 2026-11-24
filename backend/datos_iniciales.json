@@ -90,6 +90,21 @@
   }
 },
 {
+  "model": "categorias.categoria",
+  "pk": 7,
+  "fields": {
+    "nombre": "Refrigerios",
+    "slug": "refrigerios",
+    "descripcion": "Exquisitos refrigerios empresariales, combos con jugo y fruta, sándwiches artesanales, hamburguesas, wraps y opciones especiales para todo tipo de eventos.",
+    "imagen_url": "/media/productos/refrigerio_cajita_sandwich_frutas.jpg",
+    "imagen_id_publico": "",
+    "orden": 6,
+    "esta_activa": true,
+    "fecha_creacion": "2026-11-24T04:30:24.775Z",
+    "fecha_actualizacion": "2026-11-24T04:30:24.775Z"
+  }
+},
+{
   "model": "productos.producto",
   "pk": 1,
   "fields": {
@@ -1170,6 +1185,402 @@
   }
 },
 {
+  "model": "productos.producto",
+  "pk": 61,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Sándwich de Pollo Artesanal",
+    "slug": "sandwich-de-pollo-artesanal",
+    "descripcion": "Pan artesanal suave con dip de pollo especial de la casa, fresco y delicioso.",
+    "imagen_url": "/media/productos/refrigerio_sandwich_pollo.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:24.796Z",
+    "fecha_actualizacion": "2026-11-24T04:30:24.796Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 62,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Sándwich de Jamón y Queso",
+    "slug": "sandwich-de-jamon-y-queso-refrigerio",
+    "descripcion": "Pan de mantequilla, jamón de alta calidad, queso fundido y lechuga fresca seleccionada.",
+    "imagen_url": "/media/productos/refrigerio_sandwich_jamon_queso.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:24.842Z",
+    "fecha_actualizacion": "2026-11-24T04:30:24.842Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 63,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Sándwich de Lomo de Cerdo",
+    "slug": "sandwich-de-lomo-de-cerdo",
+    "descripcion": "Pan ciabatta rústico, lomo de cerdo tierno y jugoso con vegetales frescos.",
+    "imagen_url": "/media/productos/refrigerio_sandwich_lomo_cerdo.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:24.903Z",
+    "fecha_actualizacion": "2026-11-24T04:30:24.903Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 64,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Wrap de Pollo",
+    "slug": "wrap-de-pollo-refrigerio",
+    "descripcion": "Tortilla suave rellena de dip de pollo cremoso y vegetales frescos de temporada.",
+    "imagen_url": "/media/productos/refrigerio_wrap_pollo.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:24.951Z",
+    "fecha_actualizacion": "2026-11-24T04:30:24.951Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 65,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Combo Mini Hamburguesas con Brocheta y Jugo",
+    "slug": "combo-mini-hamburguesas-brocheta-jugo",
+    "descripcion": "Mini hamburguesas con pan artesanal, carne, queso, lechuga, tomate y cebolla caramelizada, acompañadas de brocheta de frutas frescas y jugo natural mini.",
+    "imagen_url": "/media/productos/refrigerio_combo_mini_hamburguesa.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.018Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.018Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 66,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Combo Hamburguesa Mediana Fiesta",
+    "slug": "combo-hamburguesa-mediana-fiesta",
+    "descripcion": "Hamburguesa mediana en pan de mantequilla, carne seleccionada, queso, lechuga, tomate y cebolla caramelizada, acompañada de papas a la francesa, masmelos con chocolate, chispas de colores y jugo natural mini.",
+    "imagen_url": "/media/productos/refrigerio_combo_hamburguesa_mediana.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.047Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.047Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 67,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Hamburguesas Artesanales",
+    "slug": "hamburguesas-artesanales-refrigerios",
+    "descripcion": "Pan suave, carne sazonada con receta de la casa, queso, lechuga, tomate y cebolla caramelizada.",
+    "imagen_url": "/media/productos/refrigerio_hamburguesas_artesanales.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.081Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.081Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 68,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Combo Mini Hamburguesa y Mini Pizza",
+    "slug": "combo-mini-hamburguesa-y-mini-pizza",
+    "descripcion": "Mini hamburguesa en pan de mantequilla con carne y cebolla caramelizada, más mini pizza artesanal de jamón y queso, acompañada de masmelos con chocolates y chispas de colores.",
+    "imagen_url": "/media/productos/refrigerio_combo_hamburguesa_pizza.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.183Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.183Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 69,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Burritos de Pollo Broaster",
+    "slug": "burritos-de-pollo-broaster",
+    "descripcion": "Tortilla suave rellena de crujiente pollo broaster, queso fundido y lechuga fresca con aderezo especial.",
+    "imagen_url": "/media/productos/refrigerio_burritos_pollo_broaster.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.227Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.227Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 70,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Croissant Relleno",
+    "slug": "croissant-relleno-refrigerios",
+    "descripcion": "Croissant hojaldrado suave relleno de jamón de pavo seleccionado, queso y lechuga fresca.",
+    "imagen_url": "/media/productos/refrigerio_croissant_relleno.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.273Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.273Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 71,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Deditos de Queso con Jugo (Refrigerio)",
+    "slug": "deditos-de-queso-con-jugo-refrigerio",
+    "descripcion": "Dedito de queso crocante de 13 cm de longitud, relleno generoso de queso costeño fundente, acompañado de jugo en caja.",
+    "imagen_url": "/media/productos/refrigerio_dedito_queso_combo.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.344Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.344Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 72,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Pastelitos Horneados de Pollo y Maíz",
+    "slug": "pastelitos-horneados-de-pollo-y-maiz",
+    "descripcion": "Pastelitos horneados crocantes rellenos de pollo tierno, queso y maíz dulce. Entregados en bolsa de papel parafinado higiénica y ecológica.",
+    "imagen_url": "/media/productos/refrigerio_pastelitos_horneados.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.388Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.388Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 73,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Perros Calientes Tradicionales",
+    "slug": "perros-calientes-tradicionales",
+    "descripcion": "Perro caliente con pan suave, salchicha premium, papitas ripio crocantes y salsas de la casa.",
+    "imagen_url": "/media/productos/refrigerio_perros_calientes.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.436Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.436Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 74,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Lasaña Trifásica Artesanal",
+    "slug": "lasana-trifasica-artesanal",
+    "descripcion": "Lasaña horneada con capas de pollo, carne y jamón con queso gratinado dorado, acompañada de tostada de ajo crujiente.",
+    "imagen_url": "/media/productos/refrigerio_lasana_trifasica.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.476Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.476Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 75,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Plato de Nochebuena Tradicional",
+    "slug": "plato-de-nochebuena-tradicional",
+    "descripcion": "Plato navideño tradicional payanés con rosquilla, arequipe cremoso, brevas caladas, natilla casera, queso y limón calado.",
+    "imagen_url": "/media/productos/refrigerio_plato_nochebuena.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.539Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.539Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 76,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Tamales de Pipián Tradicionales",
+    "slug": "tamales-de-pipian-tradicionales",
+    "descripcion": "Auténticos tamales de pipián de tradición payanesa con masa suave y hogao criollo (pedidos con mínimo 2 días de anticipación).",
+    "imagen_url": "/media/productos/refrigerio_tamales_pipian.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.606Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.606Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 77,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Wrap Gratinado Especial",
+    "slug": "wrap-gratinado-especial",
+    "descripcion": "Deliciosa tortilla rellena de pollo tierno, jamón y vegetales frescos, cubierta con generoso queso gratinado.",
+    "imagen_url": "/media/productos/refrigerio_wrap_gratinado.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.663Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.663Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 78,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Plato Navideño de Pasabocas",
+    "slug": "plato-navideno-de-pasabocas",
+    "descripcion": "Deliciosa selección de pasabocas y sabores tradicionales para compartir y disfrutar en reuniones y celebraciones.",
+    "imagen_url": "/media/productos/refrigerio_plato_navideno.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.722Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.722Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 79,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Combo de Cajita Sándwich y Frutas",
+    "slug": "combo-de-cajita-sandwich-y-frutas",
+    "descripcion": "Deliciosa cajita para refrigerio con sándwich fresco, jugo en cajita y brocheta de frutas de temporada para compartir y disfrutar.",
+    "imagen_url": "/media/productos/refrigerio_cajita_sandwich_frutas.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.779Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.779Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 80,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Combo de Cajita Sándwich Tostadito",
+    "slug": "combo-de-cajita-sandwich-tostadito",
+    "descripcion": "Deliciosa cajita con sándwich de jamón y queso tostadito al momento, jugo en cajita y brocheta de frutas frescas.",
+    "imagen_url": "/media/productos/refrigerio_cajita_sandwich_tostado.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": true,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.832Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.832Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 81,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Sándwich de Pollo Gratinado con Ensalada Parmesano",
+    "slug": "sandwich-de-pollo-gratinado-con-ensalada-parmesano",
+    "descripcion": "Sándwich de pollo gourmet con champiñones salteados gratinados y ensalada fresca con queso parmesano.",
+    "imagen_url": "/media/productos/refrigerio_sandwich_pollo_champinones.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.880Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.880Z"
+  }
+},
+{
+  "model": "productos.producto",
+  "pk": 82,
+  "fields": {
+    "categoria": 7,
+    "nombre": "Combo Nuggets con Papas y Jugo",
+    "slug": "combo-nuggets-con-papas-y-jugo",
+    "descripcion": "Deliciosa cajita infantil con nuggets de pollo crujientes, papas fritas doradas y jugo en cajita.",
+    "imagen_url": "/media/productos/refrigerio_combo_nuggets_papas.jpg",
+    "imagen_id_publico": "",
+    "esta_disponible": true,
+    "esta_destacado": false,
+    "esta_activo": true,
+    "fecha_eliminacion": null,
+    "fecha_creacion": "2026-11-24T04:30:25.935Z",
+    "fecha_actualizacion": "2026-11-24T04:30:25.935Z"
+  }
+},
+{
   "model": "productos.presentacionproducto",
   "pk": 1,
   "fields": {
@@ -2130,6 +2541,486 @@
   }
 },
 {
+  "model": "productos.presentacionproducto",
+  "pk": 65,
+  "fields": {
+    "producto": 61,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "7500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 66,
+  "fields": {
+    "producto": 61,
+    "nombre": "Combo (+ Jugo de caja y fruta)",
+    "cantidad_unidades": 1,
+    "precio": "9000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 67,
+  "fields": {
+    "producto": 62,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "7500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 68,
+  "fields": {
+    "producto": 62,
+    "nombre": "Combo (+ Jugo de caja y fruta)",
+    "cantidad_unidades": 1,
+    "precio": "9000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 69,
+  "fields": {
+    "producto": 62,
+    "nombre": "Combo Gourmet (+ Brocheta de frutas y jugo natural)",
+    "cantidad_unidades": 1,
+    "precio": "11000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 3
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 70,
+  "fields": {
+    "producto": 63,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "10500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 71,
+  "fields": {
+    "producto": 63,
+    "nombre": "Combo (+ Jugo de caja y chips de papas)",
+    "cantidad_unidades": 1,
+    "precio": "16000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 72,
+  "fields": {
+    "producto": 64,
+    "nombre": "Tortilla Mediana (M)",
+    "cantidad_unidades": 1,
+    "precio": "6500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 73,
+  "fields": {
+    "producto": 64,
+    "nombre": "Unidad Tortilla XXL",
+    "cantidad_unidades": 1,
+    "precio": "10500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 74,
+  "fields": {
+    "producto": 64,
+    "nombre": "Combo XXL (+ Nachos y jugo de caja)",
+    "cantidad_unidades": 1,
+    "precio": "16000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 3
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 75,
+  "fields": {
+    "producto": 65,
+    "nombre": "Combo completo",
+    "cantidad_unidades": 1,
+    "precio": "10000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 76,
+  "fields": {
+    "producto": 66,
+    "nombre": "Combo completo fiesta",
+    "cantidad_unidades": 1,
+    "precio": "12500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 77,
+  "fields": {
+    "producto": 67,
+    "nombre": "Mini Hamburguesa (Unidad)",
+    "cantidad_unidades": 1,
+    "precio": "3000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 78,
+  "fields": {
+    "producto": 67,
+    "nombre": "Hamburguesa Mediana Sencilla (Unidad)",
+    "cantidad_unidades": 1,
+    "precio": "6800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 79,
+  "fields": {
+    "producto": 67,
+    "nombre": "Hamburguesa Mediana Especial (Unidad)",
+    "cantidad_unidades": 1,
+    "precio": "7500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 3
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 80,
+  "fields": {
+    "producto": 68,
+    "nombre": "Combo completo",
+    "cantidad_unidades": 1,
+    "precio": "9800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 81,
+  "fields": {
+    "producto": 69,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "9000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 82,
+  "fields": {
+    "producto": 70,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "9500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 83,
+  "fields": {
+    "producto": 70,
+    "nombre": "Combo (+ Jugo de caja)",
+    "cantidad_unidades": 1,
+    "precio": "12500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 84,
+  "fields": {
+    "producto": 71,
+    "nombre": "Combo refrigerio (Dedito 13cm + Jugo)",
+    "cantidad_unidades": 1,
+    "precio": "7000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 85,
+  "fields": {
+    "producto": 72,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "4000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 86,
+  "fields": {
+    "producto": 73,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "5000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 87,
+  "fields": {
+    "producto": 74,
+    "nombre": "Tamaño Mediana",
+    "cantidad_unidades": 1,
+    "precio": "9800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 88,
+  "fields": {
+    "producto": 74,
+    "nombre": "Tamaño Personal",
+    "cantidad_unidades": 1,
+    "precio": "11500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": false,
+    "esta_activa": true,
+    "orden": 2
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 89,
+  "fields": {
+    "producto": 75,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "6000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 90,
+  "fields": {
+    "producto": 76,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "3500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 91,
+  "fields": {
+    "producto": 77,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "11800.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 92,
+  "fields": {
+    "producto": 78,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "4000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 93,
+  "fields": {
+    "producto": 79,
+    "nombre": "Unidad (Cajita completa)",
+    "cantidad_unidades": 1,
+    "precio": "10000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 94,
+  "fields": {
+    "producto": 80,
+    "nombre": "Unidad (Cajita completa)",
+    "cantidad_unidades": 1,
+    "precio": "10500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 95,
+  "fields": {
+    "producto": 81,
+    "nombre": "Unidad individual",
+    "cantidad_unidades": 1,
+    "precio": "13500.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
+  "model": "productos.presentacionproducto",
+  "pk": 96,
+  "fields": {
+    "producto": 82,
+    "nombre": "Unidad (Combo completo)",
+    "cantidad_unidades": 1,
+    "precio": "12000.00",
+    "tipo_precio": "FIJO",
+    "estado_verificacion_precio": "CONFIRMADO",
+    "es_predeterminada": true,
+    "esta_activa": true,
+    "orden": 1
+  }
+},
+{
   "model": "productos.grupovariante",
   "pk": 1,
   "fields": {
@@ -2443,6 +3334,8 @@
     "titulo_hero": "El snack perfecto para cualquier ocasión",
     "subtitulo_hero": "Pasabocas que hacen la vida más deliciosa. Crujientes, frescos y con el mejor sabor, preparados con amor para tus reuniones, cumpleaños y celebraciones especiales.",
     "texto_boton_hero": "Haz tu pedido",
+    "imagen_hero_url": "/media/productos/pag_1_img_2_X11.jpg",
+    "imagen_hero_id_publico": "",
     "mensaje_anuncio": "¡Haz tu pedido con anticipación para tus eventos! WhatsApp directo: 316 4486299",
     "mostrar_anuncio": false,
     "fecha_actualizacion": "2026-11-20T03:02:14.707Z"
