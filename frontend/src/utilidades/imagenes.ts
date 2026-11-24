@@ -13,8 +13,8 @@ export const obtenerUrlImagen = (url?: string | null): string => {
 
   const limpia = url.trim();
 
-  // Si ya es absoluta (https://... o http://...)
-  if (limpia.startsWith('http://') || limpia.startsWith('https://')) {
+  // Si ya es absoluta o Data URI (https://... o http://... o data:image/...)
+  if (limpia.startsWith('http://') || limpia.startsWith('https://') || limpia.startsWith('data:image/')) {
     return limpia;
   }
 

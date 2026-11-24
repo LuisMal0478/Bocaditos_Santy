@@ -26,7 +26,7 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=150, verbose_name="Nombre del producto")
     slug = models.SlugField(max_length=180, unique=True, blank=True, verbose_name="Slug amigable")
     descripcion = models.TextField(blank=True, verbose_name="Descripción detallada")
-    imagen_url = models.URLField(max_length=500, blank=True, verbose_name="URL de la imagen")
+    imagen_url = models.TextField(blank=True, verbose_name="URL o Data URI de la imagen")
     imagen_id_publico = models.CharField(max_length=255, blank=True, verbose_name="ID público en Cloudinary")
     esta_disponible = models.BooleanField(default=True, verbose_name="¿Disponible para pedidos?")
     esta_destacado = models.BooleanField(default=False, verbose_name="¿Producto destacado?")

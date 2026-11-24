@@ -35,19 +35,50 @@ def subir_imagen_producto(archivo_imagen, carpeta='bocaditos_santy/productos'):
             registro.error(f"Error al subir imagen a Cloudinary: {error}", exc_info=True)
             raise RuntimeError(f"No fue posible subir la imagen a Cloudinary: {error}")
 
-    # Modo de respaldo local para desarrollo
-    extension = os.path.splitext(archivo_imagen.name)[1].lower() or '.jpg'
-    nombre_archivo = f"{carpeta.replace('/', '_')}_{uuid.uuid4().hex[:10]}{extension}"
-    ruta_guardada = default_storage.save(nombre_archivo, ContentFile(archivo_imagen.read()))
-    url_local = default_storage.url(ruta_guardada)
-    return url_local, f"local_{nombre_archivo}"
+    # Modo de respaldo persistente sin Cloudinary:
+    # Optimiza y comprime la imagen con Pillow y la almacena como Data URI (Base64)
+    # directamente en PostgreSQL para que NUNCA se pierda en contenedores efímeros (como Render/Railway).
+    try:
+        from PIL import Image
+        import io
+        import base64
+
+        archivo_imagen.seek(0)
+        im = Image.open(archivo_imagen)
+        if im.mode in ('RGBA', 'P'):
+            im = im.convert('RGB')
+        im.thumbnail((800, 800), Image.Resampling.LANCZOS)
+
+        buffer = io.BytesIO()
+        im.save(buffer, format='JPEG', quality=80, optimize=True)
+        img_bytes = buffer.getvalue()
+        b64_str = base64.b64encode(img_bytes).decode('utf-8')
+        data_uri = f"data:image/jpeg;base64,{b64_str}"
+
+        # Guardar también archivo local si el almacenamiento lo permite
+        extension = os.path.splitext(archivo_imagen.name)[1].lower() or '.jpg'
+        nombre_archivo = f"{carpeta.replace('/', '_')}_{uuid.uuid4().hex[:10]}{extension}"
+        try:
+            default_storage.save(nombre_archivo, ContentFile(img_bytes))
+        except Exception:
+            pass
+
+        return data_uri, f"b64_{uuid.uuid4().hex[:12]}"
+    except Exception as error_pillow:
+        registro.warning(f"No se pudo generar Data URI con Pillow, usando almacenamiento local estándar: {error_pillow}")
+        archivo_imagen.seek(0)
+        extension = os.path.splitext(archivo_imagen.name)[1].lower() or '.jpg'
+        nombre_archivo = f"{carpeta.replace('/', '_')}_{uuid.uuid4().hex[:10]}{extension}"
+        ruta_guardada = default_storage.save(nombre_archivo, ContentFile(archivo_imagen.read()))
+        url_local = default_storage.url(ruta_guardada)
+        return url_local, f"local_{nombre_archivo}"
 
 
 def eliminar_imagen_segura(id_publico):
     """
     Elimina una imagen de Cloudinary o del almacenamiento local a partir de su ID público.
     """
-    if not id_publico:
+    if not id_publico or id_publico.startswith('b64_'):
         return
 
     if id_publico.startswith('local_'):

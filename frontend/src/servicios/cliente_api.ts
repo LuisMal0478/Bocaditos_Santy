@@ -17,6 +17,10 @@ clienteApi.interceptors.request.use((configuracion) => {
   if (token && configuracion.headers) {
     configuracion.headers.Authorization = `Bearer ${token}`;
   }
+  // Si se envían datos FormData, eliminar Content-Type para que Axios/navegador asigne el boundary automáticamente
+  if (configuracion.data instanceof FormData && configuracion.headers) {
+    delete configuracion.headers['Content-Type'];
+  }
   return configuracion;
 });
 

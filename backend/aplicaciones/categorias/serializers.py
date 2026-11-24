@@ -30,7 +30,7 @@ class SerializadorCategoria(serializers.ModelSerializer):
         data = super().to_representation(instance)
         request = self.context.get('request')
         url = data.get('imagen_url')
-        if url and request and not url.startswith(('http://', 'https://')):
+        if url and request and not url.startswith(('http://', 'https://', 'data:image/')):
             if not url.startswith('/media/productos/'):
                 data['imagen_url'] = request.build_absolute_uri(url)
         return data

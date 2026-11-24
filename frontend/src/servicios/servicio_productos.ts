@@ -33,16 +33,12 @@ export const servicioProductos = {
   },
 
   crear: async (datos: FormData) => {
-    const respuesta = await clienteApi.post<ProductoDetalle>('/productos/', datos, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    });
+    const respuesta = await clienteApi.post<ProductoDetalle>('/productos/', datos);
     return respuesta.data;
   },
 
   actualizar: async (id: number, datos: FormData) => {
-    const respuesta = await clienteApi.patch<ProductoDetalle>(`/productos/${id}/`, datos, {
-      headers: { 'Content-Type': 'multipart/form-data' },
-    });
+    const respuesta = await clienteApi.patch<ProductoDetalle>(`/productos/${id}/`, datos);
     return respuesta.data;
   },
 

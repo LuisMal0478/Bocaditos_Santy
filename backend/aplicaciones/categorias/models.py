@@ -7,7 +7,7 @@ class Categoria(models.Model):
     nombre = models.CharField(max_length=100, unique=True, verbose_name="Nombre de la categoría")
     slug = models.SlugField(max_length=120, unique=True, blank=True, verbose_name="Slug amigable")
     descripcion = models.TextField(blank=True, verbose_name="Descripción")
-    imagen_url = models.URLField(max_length=500, blank=True, verbose_name="URL de imagen")
+    imagen_url = models.TextField(blank=True, verbose_name="URL o Data URI de la imagen")
     imagen_id_publico = models.CharField(max_length=255, blank=True, verbose_name="ID público en Cloudinary")
     orden = models.PositiveIntegerField(default=0, verbose_name="Orden de visualización")
     esta_activa = models.BooleanField(default=True, verbose_name="¿Está activa?")

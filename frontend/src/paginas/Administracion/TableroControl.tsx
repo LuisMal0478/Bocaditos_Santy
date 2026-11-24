@@ -173,6 +173,7 @@ export const TableroControl: React.FC = () => {
   const [formProdDestacado, setFormProdDestacado] = useState(false);
   const [formProdDisponible, setFormProdDisponible] = useState(true);
   const [formProdArchivoImagen, setFormProdArchivoImagen] = useState<File | null>(null);
+  const [formProdImagenUrl, setFormProdImagenUrl] = useState('');
   const [formPresNombre, setFormPresNombre] = useState('Paquete x 20 unidades');
   const [formPresUnidades, setFormPresUnidades] = useState(20);
   const [formPresPrecio, setFormPresPrecio] = useState<string>('');
@@ -339,6 +340,7 @@ export const TableroControl: React.FC = () => {
     setFormProdDestacado(false);
     setFormProdDisponible(true);
     setFormProdArchivoImagen(null);
+    setFormProdImagenUrl('');
     setFormPresNombre('Paquete x 20 unidades');
     setFormPresUnidades(20);
     setFormPresPrecio('');
@@ -355,6 +357,7 @@ export const TableroControl: React.FC = () => {
     setFormProdDestacado(prod.esta_destacado);
     setFormProdDisponible(prod.esta_disponible);
     setFormProdArchivoImagen(null);
+    setFormProdImagenUrl(prod.imagen_url || '');
 
     const pres = prod.presentacion_predeterminada;
     setFormPresNombre(pres ? pres.nombre : 'Paquete x 20 unidades');
@@ -393,6 +396,8 @@ export const TableroControl: React.FC = () => {
 
       if (formProdArchivoImagen) {
         formData.append('archivo_imagen', formProdArchivoImagen);
+      } else if (formProdImagenUrl.trim()) {
+        formData.append('imagen_url', formProdImagenUrl.trim());
       }
 
       if (productoEnEdicion) {
@@ -2787,13 +2792,13 @@ export const TableroControl: React.FC = () => {
                 Fotografía (opcional)
               </label>
               <div className="flex items-center gap-3">
-                {(formProdArchivoImagen || productoEnEdicion?.imagen_url) && (
+                {(formProdArchivoImagen || formProdImagenUrl || productoEnEdicion?.imagen_url) && (
                   <div className="w-12 h-12 rounded-xl overflow-hidden bg-rosa-50 border border-rosa-200 shrink-0 shadow-xs">
                     <img
                       src={
                         formProdArchivoImagen
                           ? URL.createObjectURL(formProdArchivoImagen)
-                          : obtenerUrlImagen(productoEnEdicion?.imagen_url)
+                          : obtenerUrlImagen(formProdImagenUrl || productoEnEdicion?.imagen_url)
                       }
                       alt="Vista previa"
                       className="w-full h-full object-cover"
@@ -2801,16 +2806,28 @@ export const TableroControl: React.FC = () => {
                     />
                   </div>
                 )}
-                <input
-                  type="file"
-                  accept="image/*"
-                  onChange={(e) => {
-                    if (e.target.files && e.target.files[0]) {
-                      setFormProdArchivoImagen(e.target.files[0]);
-                    }
-                  }}
-                  className="w-full text-xs text-gray-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rosa-50 file:text-rosa-700 hover:file:bg-rosa-100"
-                />
+                <div className="flex-1 space-y-1.5">
+                  <input
+                    type="file"
+                    accept="image/*"
+                    onChange={(e) => {
+                      if (e.target.files && e.target.files[0]) {
+                        setFormProdArchivoImagen(e.target.files[0]);
+                      }
+                    }}
+                    className="w-full text-xs text-gray-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rosa-50 file:text-rosa-700 hover:file:bg-rosa-100"
+                  />
+                  <input
+                    type="text"
+                    placeholder="O pegar URL de imagen / ruta (ej. /media/productos/...)"
+                    value={formProdImagenUrl}
+                    onChange={(e) => {
+                      setFormProdImagenUrl(e.target.value);
+                      if (e.target.value) setFormProdArchivoImagen(null);
+                    }}
+                    className="w-full px-2.5 py-1 text-[11px] rounded-lg border border-gray-200 focus:ring-1 focus:ring-rosa-400 placeholder:text-gray-400"
+                  />
+                </div>
               </div>
             </div>
           </div>

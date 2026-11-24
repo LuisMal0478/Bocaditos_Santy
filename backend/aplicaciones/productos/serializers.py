@@ -110,7 +110,7 @@ class SerializadorProductoLista(serializers.ModelSerializer):
         data = super().to_representation(instance)
         request = self.context.get('request')
         url = data.get('imagen_url')
-        if url and request and not url.startswith(('http://', 'https://')):
+        if url and request and not url.startswith(('http://', 'https://', 'data:image/')):
             if not url.startswith('/media/productos/'):
                 data['imagen_url'] = request.build_absolute_uri(url)
         return data
@@ -156,7 +156,7 @@ class SerializadorProductoDetalle(serializers.ModelSerializer):
         data = super().to_representation(instance)
         request = self.context.get('request')
         url = data.get('imagen_url')
-        if url and request and not url.startswith(('http://', 'https://')):
+        if url and request and not url.startswith(('http://', 'https://', 'data:image/')):
             if not url.startswith('/media/productos/'):
                 data['imagen_url'] = request.build_absolute_uri(url)
         return data
@@ -194,7 +194,7 @@ class SerializadorProductoEscritura(serializers.ModelSerializer):
             'presentacion_tipo_precio',
             'presentacion_estado_verificacion',
         ]
-        read_only_fields = ['id', 'slug', 'imagen_url', 'imagen_id_publico']
+        read_only_fields = ['id', 'slug', 'imagen_id_publico']
 
     def create(self, validated_data):
         archivo_imagen = validated_data.pop('archivo_imagen', None)
@@ -260,7 +260,7 @@ class SerializadorProductoEscritura(serializers.ModelSerializer):
         data = super().to_representation(instance)
         request = self.context.get('request')
         url = data.get('imagen_url')
-        if url and request and not url.startswith(('http://', 'https://')):
+        if url and request and not url.startswith(('http://', 'https://', 'data:image/')):
             if not url.startswith('/media/productos/'):
                 data['imagen_url'] = request.build_absolute_uri(url)
         return data
