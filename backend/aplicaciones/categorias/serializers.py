@@ -26,3 +26,12 @@ class SerializadorCategoria(serializers.ModelSerializer):
     def get_total_productos(self, objeto):
         return objeto.productos.filter(esta_activo=True).count()
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get('request')
+        url = data.get('imagen_url')
+        if url and request and not url.startswith(('http://', 'https://')):
+            if not url.startswith('/media/productos/'):
+                data['imagen_url'] = request.build_absolute_uri(url)
+        return data
+

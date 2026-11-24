@@ -21,6 +21,7 @@ import {
 import { RUTAS, TIPOS_EVENTO } from '../../utilidades/constantes';
 import { useCotizacion } from '../../contextos/almacen_cotizacion';
 import { formatearMoneda } from '../../utilidades/formateadores';
+import { obtenerUrlImagen, manejarErrorImagen } from '../../utilidades/imagenes';
 import { servicioCotizaciones } from '../../servicios/servicio_cotizaciones';
 import { Boton } from '../../componentes/comunes/Boton';
 import { MensajeAlerta } from '../../componentes/comunes/MensajeAlerta';
@@ -251,12 +252,10 @@ export const PaginaCotizacion: React.FC = () => {
                     {/* Foto */}
                     <div className="w-16 h-16 rounded-xl overflow-hidden bg-rosa-50 shrink-0 border border-rosa-100">
                       <img
-                        src={item.producto.imagen_url || '/placeholder.jpg'}
+                        src={obtenerUrlImagen(item.producto.imagen_url)}
                         alt={item.producto.nombre}
                         className="w-full h-full object-cover"
-                        onError={(e) => {
-                          (e.target as HTMLImageElement).src = '/placeholder.jpg';
-                        }}
+                        onError={manejarErrorImagen}
                       />
                     </div>
 

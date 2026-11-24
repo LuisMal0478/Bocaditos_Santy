@@ -5,6 +5,7 @@ import { Boton } from '../comunes/Boton';
 import { Insignia } from '../comunes/Insignia';
 import { ProductoDetalle, PresentacionProducto, OpcionVariante } from '../../tipos/producto';
 import { formatearMoneda } from '../../utilidades/formateadores';
+import { obtenerUrlImagen, manejarErrorImagen } from '../../utilidades/imagenes';
 import { useCotizacion } from '../../contextos/almacen_cotizacion';
 
 export interface PropiedadesModalDetalleProducto {
@@ -84,12 +85,10 @@ export const ModalDetalleProducto: React.FC<PropiedadesModalDetalleProducto> = (
         <div className="space-y-2 sm:space-y-3">
           <div className="h-36 sm:h-52 md:h-auto md:aspect-[4/3] rounded-xl sm:rounded-2xl overflow-hidden bg-rosa-50/60 border border-rosa-100 relative shrink-0">
             <img
-              src={producto.imagen_url || '/placeholder.jpg'}
+              src={obtenerUrlImagen(producto.imagen_url)}
               alt={producto.nombre}
               className="w-full h-full object-cover"
-              onError={(e) => {
-                (e.target as HTMLImageElement).src = '/placeholder.jpg';
-              }}
+              onError={manejarErrorImagen}
             />
           </div>
           <div className="flex flex-wrap items-center gap-1.5 sm:gap-2">

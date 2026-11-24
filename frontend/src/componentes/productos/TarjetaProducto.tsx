@@ -2,6 +2,7 @@ import React from 'react';
 import { Plus, Eye, Sparkles, Star } from 'lucide-react';
 import { ProductoLista } from '../../tipos/producto';
 import { formatearMoneda } from '../../utilidades/formateadores';
+import { obtenerUrlImagen, manejarErrorImagen } from '../../utilidades/imagenes';
 
 export interface PropiedadesTarjetaProducto {
   producto: ProductoLista;
@@ -28,13 +29,11 @@ export const TarjetaProducto: React.FC<PropiedadesTarjetaProducto> = ({
         onClick={() => alVerDetalles(producto)}
       >
         <img
-          src={producto.imagen_url || '/placeholder.jpg'}
+          src={obtenerUrlImagen(producto.imagen_url)}
           alt={producto.nombre}
           className="w-full h-full object-cover group-hover:scale-108 transition-transform duration-500 ease-out"
           loading="lazy"
-          onError={(e) => {
-            (e.target as HTMLImageElement).src = '/placeholder.jpg';
-          }}
+          onError={manejarErrorImagen}
         />
         
         {/* Degradado sutil para resaltar textos e insignias */}

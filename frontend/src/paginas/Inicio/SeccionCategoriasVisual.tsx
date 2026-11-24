@@ -4,6 +4,7 @@ import { ArrowRight, Sparkles } from 'lucide-react';
 import { RUTAS } from '../../utilidades/constantes';
 import { Categoria } from '../../tipos/categoria';
 import { servicioCategorias } from '../../servicios/servicio_categorias';
+import { obtenerUrlImagen, manejarErrorImagen } from '../../utilidades/imagenes';
 
 export const SeccionCategoriasVisual: React.FC = () => {
   const [categorias, setCategorias] = useState<Categoria[]>([]);
@@ -45,12 +46,10 @@ export const SeccionCategoriasVisual: React.FC = () => {
               {/* Imagen con zoom */}
               <div className="relative aspect-[4/3] overflow-hidden bg-orange-50">
                 <img
-                  src={cat.imagen_url || '/placeholder.jpg'}
+                  src={obtenerUrlImagen(cat.imagen_url)}
                   alt={cat.nombre}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-                  onError={(e) => {
-                    (e.target as HTMLImageElement).src = '/placeholder.jpg';
-                  }}
+                  onError={manejarErrorImagen}
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent opacity-60 group-hover:opacity-40 transition-opacity"></div>
                 <span className="absolute top-3 right-3 bg-white/95 backdrop-blur-md text-orange-700 text-[10px] font-bold px-2.5 py-1 rounded-full shadow-xs">

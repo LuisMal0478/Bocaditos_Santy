@@ -106,6 +106,15 @@ class SerializadorProductoLista(serializers.ModelSerializer):
     def get_tiene_variantes(self, objeto):
         return objeto.grupos_variantes.filter(esta_activo=True).exists()
 
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get('request')
+        url = data.get('imagen_url')
+        if url and request and not url.startswith(('http://', 'https://')):
+            if not url.startswith('/media/productos/'):
+                data['imagen_url'] = request.build_absolute_uri(url)
+        return data
+
 
 class SerializadorProductoDetalle(serializers.ModelSerializer):
     """
@@ -142,6 +151,15 @@ class SerializadorProductoDetalle(serializers.ModelSerializer):
     def get_grupos_variantes(self, objeto):
         grupos_activos = objeto.grupos_variantes.filter(esta_activo=True).order_by('orden', 'id')
         return SerializadorGrupoVariante(grupos_activos, many=True).data
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get('request')
+        url = data.get('imagen_url')
+        if url and request and not url.startswith(('http://', 'https://')):
+            if not url.startswith('/media/productos/'):
+                data['imagen_url'] = request.build_absolute_uri(url)
+        return data
 
 
 class SerializadorProductoEscritura(serializers.ModelSerializer):
@@ -237,4 +255,14 @@ class SerializadorProductoEscritura(serializers.ModelSerializer):
                 pres.save()
 
         return producto
+
+    def to_representation(self, instance):
+        data = super().to_representation(instance)
+        request = self.context.get('request')
+        url = data.get('imagen_url')
+        if url and request and not url.startswith(('http://', 'https://')):
+            if not url.startswith('/media/productos/'):
+                data['imagen_url'] = request.build_absolute_uri(url)
+        return data
+
 

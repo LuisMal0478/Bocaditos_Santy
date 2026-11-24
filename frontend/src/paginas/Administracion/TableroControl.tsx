@@ -53,6 +53,7 @@ import { Modal } from '../../componentes/comunes/Modal';
 import { Cargando } from '../../componentes/comunes/Cargando';
 import { MensajeAlerta } from '../../componentes/comunes/MensajeAlerta';
 import { formatearMoneda } from '../../utilidades/formateadores';
+import { obtenerUrlImagen, manejarErrorImagen } from '../../utilidades/imagenes';
 
 // Paletas temáticas de 1 clic para Bocaditos Santy
 const PALETAS_PREDEFINIDAS = [
@@ -1212,12 +1213,10 @@ export const TableroControl: React.FC = () => {
                         <div className="flex items-start gap-3">
                           <div className="w-16 h-16 rounded-2xl overflow-hidden bg-rosa-50 border border-rosa-100 shrink-0">
                             <img
-                              src={prod.imagen_url || '/placeholder.jpg'}
+                              src={obtenerUrlImagen(prod.imagen_url)}
                               alt={prod.nombre}
                               className="w-full h-full object-cover"
-                              onError={(e) => {
-                                (e.target as HTMLImageElement).src = '/placeholder.jpg';
-                              }}
+                              onError={manejarErrorImagen}
                             />
                           </div>
                           <div className="flex-1 min-w-0">
@@ -1328,12 +1327,10 @@ export const TableroControl: React.FC = () => {
                               <div className="flex items-center gap-3">
                                 <div className="w-12 h-12 rounded-xl overflow-hidden bg-rosa-50 border border-rosa-100 shrink-0">
                                   <img
-                                    src={prod.imagen_url || '/placeholder.jpg'}
+                                    src={obtenerUrlImagen(prod.imagen_url)}
                                     alt={prod.nombre}
                                     className="w-full h-full object-cover"
-                                    onError={(e) => {
-                                      (e.target as HTMLImageElement).src = '/placeholder.jpg';
-                                    }}
+                                    onError={manejarErrorImagen}
                                   />
                                 </div>
                                 <div>
@@ -1882,12 +1879,10 @@ export const TableroControl: React.FC = () => {
                               title={`Toca para usar la foto de ${prod.nombre} como portada`}
                             >
                               <img
-                                src={prod.imagen_url || '/placeholder.jpg'}
+                                src={obtenerUrlImagen(prod.imagen_url)}
                                 alt={prod.nombre}
                                 className="w-full h-full object-cover group-hover:scale-110 transition-transform"
-                                onError={(e) => {
-                                  (e.target as HTMLImageElement).src = '/placeholder.jpg';
-                                }}
+                                onError={manejarErrorImagen}
                               />
                               <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-1">
                                 <span className="text-[10px] text-white font-medium block truncate text-center">
@@ -2791,16 +2786,32 @@ export const TableroControl: React.FC = () => {
               <label className="block text-xs font-bold text-texto-principal uppercase tracking-wider mb-1">
                 Fotografía (opcional)
               </label>
-              <input
-                type="file"
-                accept="image/*"
-                onChange={(e) => {
-                  if (e.target.files && e.target.files[0]) {
-                    setFormProdArchivoImagen(e.target.files[0]);
-                  }
-                }}
-                className="w-full text-xs text-gray-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rosa-50 file:text-rosa-700 hover:file:bg-rosa-100"
-              />
+              <div className="flex items-center gap-3">
+                {(formProdArchivoImagen || productoEnEdicion?.imagen_url) && (
+                  <div className="w-12 h-12 rounded-xl overflow-hidden bg-rosa-50 border border-rosa-200 shrink-0 shadow-xs">
+                    <img
+                      src={
+                        formProdArchivoImagen
+                          ? URL.createObjectURL(formProdArchivoImagen)
+                          : obtenerUrlImagen(productoEnEdicion?.imagen_url)
+                      }
+                      alt="Vista previa"
+                      className="w-full h-full object-cover"
+                      onError={manejarErrorImagen}
+                    />
+                  </div>
+                )}
+                <input
+                  type="file"
+                  accept="image/*"
+                  onChange={(e) => {
+                    if (e.target.files && e.target.files[0]) {
+                      setFormProdArchivoImagen(e.target.files[0]);
+                    }
+                  }}
+                  className="w-full text-xs text-gray-500 file:mr-2 file:py-1.5 file:px-3 file:rounded-full file:border-0 file:text-xs file:font-semibold file:bg-rosa-50 file:text-rosa-700 hover:file:bg-rosa-100"
+                />
+              </div>
             </div>
           </div>
 
